@@ -1,37 +1,48 @@
-
 $breakpoints: (
   laptop_l: 1440px,
   laptop: 1024px,
   tablet: 768px,
   mobile_l: 425px,
   mobile_m: 375px,
-  mobile_s: 320px
+  mobile_s: 320px,
 );
 
-
-@mixin responsive ($breakpoint){
+@mixin responsive($breakpoint) {
   //  laptop_l  : 1440px
-  @if $breakpoint == laptop_l { 
-      @media only screen and (max-width: 1440px) {@content}; 
-  };
+  @if $breakpoint == laptop_l {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+  
   // laptop    : 1024px
-  @if $breakpoint == laptop { 
-      @media only screen and (max-width: 1024px) {@content}; 
-  };
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
   //tablet    :  768px
-  @if $breakpoint == tablet { 
-      @media only screen and (max-width: 768px) {@content}; 
-  };
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
   // mobile_l  :  425px
-  @if $breakpoint == mobile_l { 
-      @media only screen and (max-width: 425px) {@content}; 
-  };
+  @if $breakpoint == mobile_l {
+    @media only screen and (max-width: 425px) {
+      @content;
+    }
+  }
   // mobile_m  :  375px,
-  @if $breakpoint == mobile_m { 
-      @media only screen and (max-width: 375px) {@content}; 
-  };
+  @if $breakpoint == mobile_m {
+    @media only screen and (max-width: 375px) {
+      @content;
+    }
+  }
   // mobile_s  :  320px
-  @if $breakpoint == mobile_s { 
-      @media only screen and (min-width: 320px) {@content}; 
-  };
+  @if $breakpoint == mobile_s {
+    @media only screen and (min-width: 320px) {
+      @content;
+    }
+  }
 }

@@ -1,0 +1,238 @@
+@import "auxiliar";
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$DesaturatedDarkBlue: hsl(214, 17%, 51%);
+$GrayishBlue: hsl(212, 23%, 69%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+.main {
+  font-family: "Manrope", sans-serif;
+  background-color: $LightGrayishBlue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  width: 730px;
+  height: 280px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
+  @include responsive(laptop) {
+    flex-direction: column;
+    height: auto;
+    width: 327px;
+    position: relative;
+  }
+
+  &Imag {
+    overflow: hidden;
+    width: 285px;
+    height: 100%;
+    & img {
+      height: 100%;
+    }
+    @include responsive(laptop) {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px 10px 0 0;
+      & img {
+        height: auto;
+        width: 100%;
+        transform: translateY(-25%);
+      }
+    }
+  }
+  &Info {
+    padding: 32px 36px 32px 40px;
+    width: calc(100% - 285px);
+    @include responsive(laptop) {
+      width: 100%;
+      padding: 40px 32px 40px;
+    }
+    @include responsive(tablet) {
+      padding: 36px 30px 20px;
+    }
+
+    &Ttl {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+      color: $VeryDarkGrayishBlue;
+      margin-bottom: 12px;
+      @include responsive(tablet) {
+        font-size: 16px;
+      }
+    }
+    &Phrase {
+      font-size: 13px;
+      color: $GrayishBlue;
+      letter-spacing: -0.01em;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      @include responsive(tablet) {
+        font-size: 14px;
+      }
+    }
+  }
+  &Avatar {
+    display: flex;
+    align-items: center;
+    &Imag {
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border-radius: 100%;
+      margin-right: 16px;
+      & img {
+        width: 100%;
+      }
+    }
+    &Info {
+      margin-right: auto;
+    }
+    &Name {
+      font-size: 13px;
+      color: $VeryDarkGrayishBlue;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      margin-bottom: 4px;
+    }
+    &Date {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+      color: $GrayishBlue;
+    }
+    &Share {
+      position: relative;
+      @include responsive(tablet) {
+        position: unset;
+      }
+      &.active &Btn {
+        background-color: $VeryDarkGrayishBlue;
+      }
+      &.active &BtnIcon {
+        color: $LightGrayishBlue;
+      }
+      &Btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: $LightGrayishBlue;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &Icon {
+          color: $VeryDarkGrayishBlue;
+          user-select: none;
+          font-size: 20px;
+        }
+        &:hover {
+          background-color: lighten($VeryDarkGrayishBlue, 50%);
+        }
+        &:hover &Icon {
+          color: darken($LightGrayishBlue, 50%);
+        }
+        &:active {
+          background-color: $VeryDarkGrayishBlue;
+        }
+        &:active &Icon {
+          color: $LightGrayishBlue;
+        }
+      }
+      &Info {
+        background-color: $VeryDarkGrayishBlue;
+        border-radius: 10px;
+        bottom: 60px;
+        color: $GrayishBlue;
+        cursor: pointer;
+        display: flex;
+        visibility: hidden;
+        font-size: 20px;
+        height: 55px;
+        left: -115px;
+        padding: 16px 32px;
+        justify-content: space-between;
+        transition: all 0.2s ease-in-out;
+        position: absolute;
+        width: 250px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+
+        @include responsive(tablet) {
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 64px;
+          align-items: center;
+          border-radius: 0 0 10px 10px;
+          box-shadow: none;
+        }
+
+        &:after {
+          content: "";
+          border: 20px solid transparent;
+          border-top-color: $VeryDarkGrayishBlue;
+          border-bottom: 0;
+          bottom: 0;
+          position: absolute;
+          left: calc(50% + 5px);
+          width: 0;
+          height: 0;
+          margin-left: -20px;
+          margin-bottom: -20px;
+          @include responsive(tablet) {
+            display: none;
+          }
+        }
+        &Txt {
+          letter-spacing: 0.3em;
+          font-size: 14px;
+          font-weight: 700;
+        }
+        & a:hover {
+          color: $LightGrayishBlue;
+        }
+      }
+    }
+  }
+}
+
+.enterActive {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0) translateY(50px);
+  @include responsive(tablet) {
+    transform: translateY(25%);
+  }
+}
+.enterDone {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+  @include responsive(tablet) {
+    transform: translateY(0);
+  }
+}
+.exitActive {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+  @include responsive(tablet) {
+    transform: translateY(0);
+  }
+}
+.exitDone {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0) translateY(50px);
+  @include responsive(tablet) {
+    transform: translateY(25%);
+  }
+}

@@ -1,0 +1,210 @@
+@import "auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+$VeryDarkBlue: hsl(234, 12%, 34%);
+$GrayishBlue: hsl(229, 6%, 66%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+.body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf0f1;
+  @include responsive(laptop_l) {
+    overflow: scroll;
+  }
+}
+
+.main {
+  width: 1440px;
+  height: 922px;
+  background-color: $VeryLightGray;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  @include responsive(laptop_l) {
+    width: 100vw;
+    height: auto;
+  }
+
+  @include responsive(tablet) {
+    height: 100%;
+    justify-content: unset;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.heading {
+  max-width: 500px;
+  text-align: center;
+  padding: 75px 0 60px;
+  margin: 0 auto;
+  
+  @include responsive(mobile_l) {
+    padding: 90px 35px 75px;
+  }
+  &Main {
+    font-size: 35px;
+    letter-spacing: 0.01em;
+    font-weight: 200;
+    color: $VeryDarkBlue;
+    margin-bottom: 30px;
+    line-height: 1;
+
+    @include responsive(mobile_l) {
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+  }
+  &Sub {
+    font-weight: 600;
+    font-size: 35px;
+    letter-spacing: 0.02em;
+    color: $VeryDarkBlue;
+    margin-bottom: 25px;
+    line-height: 1;
+    @include responsive(mobile_l) {
+      font-size: 24px;
+      letter-spacing: .01em;
+    }
+  }
+  &Leg {
+    font-size: 16px;
+    line-height: 1.7;
+    color: $GrayishBlue;
+    font-weight: 400;
+    
+    @include responsive(mobile_l) {
+      font-size: 15px;
+      line-height: 1.65;
+    }
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 80px;
+  // display:flex;
+  // flex-direction: column;
+  // margin: 0 auto;
+  @include responsive(laptop_l) {
+    padding: 0 30px;
+    grid-gap: 0.02 * 100vw;
+  }
+  @include responsive(tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0px 0 20px rgba(0, 0, 0, 0.25);
+  height: 250px;
+  width: 350px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  @include responsive(laptop_l) {
+    width: auto;
+  }
+  @include responsive(tablet) {
+    height: auto;
+    margin-bottom: 30px;
+  }
+  @include responsive(mobile_l) {
+    padding: 30px;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    transition: 0.2s ease-in-out;
+  }
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0 20px rgba(0, 0, 0, 0.3);
+    &:before {
+      height: 6px;
+    }
+  }
+  &Cyan {
+    grid-row: 2 / span 2;
+    grid-column: 1 / 2;
+    &:before {
+      background-color: $Cyan;
+    }
+  }
+  &Orange {
+    grid-row: 3 / span 2;
+    grid-column: 2 / 3;
+    &:before {
+      background-color: $Orange;
+    }
+  }
+  &Red {
+    grid-row: 1 / span 2;
+    grid-column: 2 / 3;
+    &:before {
+      background-color: $Red;
+    }
+  }
+  &Blue {
+    grid-row: 2 / span 2;
+    grid-column: 3 / -1;
+    &:before {
+      background-color: $Blue;
+    }
+  }
+  &Titulo {
+    font-size: 20px;
+    font-weight: 600;
+    color: $VeryDarkBlue;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+    
+    @include responsive(mobile_l) {
+      margin-bottom: 5px;
+    }
+  }
+  &Texto {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $GrayishBlue;
+    margin-bottom: 35px;
+  }
+  &Imagem {
+    margin-top: auto;
+    margin-left: auto;
+    
+    @include responsive(mobile_l) {
+      width: 57px;
+      height: 57px;
+      & img{
+        width: 100%;
+      }
+    }
+  }
+}
