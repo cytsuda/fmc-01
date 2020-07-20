@@ -1,0 +1,98 @@
+@import "../../styles/auxiliar";
+
+.container {
+  width: 540px;
+  padding: 40px;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  
+  @include responsive(tablet){
+    width: 100%;
+  }
+}
+.progress {
+  height: 20px;
+  padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  position: relative;
+  cursor: pointer;
+  &Bar {
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    min-width: 14px;
+    &:after {
+      content: "";
+      height: 9px;
+      width: 9px;
+      position: absolute;
+      right: 3px;
+      top: 1px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+  }
+  &Info {
+    position: absolute;
+    background-color: #fff;
+    padding: 12px 24px;
+    font-size: 40px;
+    border-radius: 10px 10px 0 10px;
+    top: -110px;
+    right: 10px;
+    opacity: 1;
+    visibility: hidden;
+    @include responsive(mobile_l){
+      width: 180px;
+      border-radius: 10px;
+      top: unset;
+      bottom: -105px;
+      left: 50%;
+    }
+    &Span {
+      margin-left: 10px;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      vertical-align: middle;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-top-color: #fff;
+      border-bottom: 0;
+      border-right: 0;
+      margin-right: -10px;
+      margin-bottom: -20px;
+      @include responsive(mobile_l){
+        display:none;
+      }
+    }
+  }
+}
+
+.text {
+  margin-bottom: 16px;
+  &Bold {
+    font-weight: bolder;
+  }
+}
+
+.info {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+}
+
+/*
+container
+progress
+info
+*/

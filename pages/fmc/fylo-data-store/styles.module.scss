@@ -1,0 +1,78 @@
+@import "../../../styles/auxiliar";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+$Gradient: linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+$LightBlue: hsl(228,55%, 68%);
+$PaleBlue: hsl(243, 100%, 93%);
+$GrayishBlue: hsl(229, 7%, 55%);
+$DarkBlue: hsl(228, 56%, 26%);
+$VeryDarkBlue: hsl(229, 57%, 11%);
+$mainFont: 'Raleway', sans-serif;
+
+.main {
+  font-family: $mainFont;
+  font-weight: 400;
+  min-width: 100%;
+  min-height: 100vh;
+  background: url('./bg-desktop.png'), $VeryDarkBlue;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  display:flex;
+  justify-content: center;
+  @include responsive(laptop){
+    width: 100%;
+  }
+  
+  @include responsive(tablet){
+    background: url('./bg-mobile.png'), $VeryDarkBlue;
+    background-size: cover;
+  }
+}
+
+.container{
+  width: 975px;
+  margin: auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include responsive(laptop){
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: unset;
+    margin: 0 auto;
+    height: 100vh;
+  }
+  @include responsive(mobile_l){
+    justify-content: center;
+    padding: 0 25px; 
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.bg{
+  background-color: $DarkBlue;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.25);
+  &Dark{
+    background-color: $VeryDarkBlue;
+  }
+  &Small{
+    background: $Gradient;
+  }
+}
+.color{
+  &Dark{
+    color: $VeryDarkBlue;
+  }
+  &Gray{
+    color: $GrayishBlue;
+  }
+}
+.bold{
+  font-weight: 700;
+}
+.icon{
+  color: $LightBlue;
+  background-color: $VeryDarkBlue;
+}

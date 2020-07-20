@@ -33,3 +33,5 @@ yarn-error.log*
 #scss
 /pages/style/*.module.css
 /pages/style/*.module.css.map
+
+report.**.json

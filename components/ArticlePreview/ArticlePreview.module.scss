@@ -1,0 +1,240 @@
+@import "../../styles/auxiliar";
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$DesaturatedDarkBlue: hsl(214, 17%, 51%);
+$GrayishBlue: hsl(212, 23%, 69%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+.card {
+  height: 280px;
+  width: 730px;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+
+  @include responsive(tablet) {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    flex-direction: column;
+    margin: 32px;
+  }
+  @include responsive(mobile_m) {
+    margin: 24px;
+  }
+  @include responsive(mobile_s) {
+    margin: 12px;
+  }
+
+  &Thumbnail {
+    min-width: 280px;
+    width: calc(50vw / 2.6);
+    overflow: hidden;
+
+    @include responsive(tablet) {
+      width: 100%;
+      min-width: 100%;
+      height: auto;
+      max-height: 280px;
+    }
+
+    @include responsive(mobile_l) {
+      max-height: 200px;
+    }
+
+    &Image {
+      height: 100%;
+      width: auto;
+      @include responsive(tablet) {
+        width: 100%;
+        height: auto;
+        margin-top: -50px;
+      }
+      @include responsive(mobile_l) {
+        margin-top: -15px;
+      }
+    }
+  }
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px 32px 32px;
+  justify-content: space-between;
+  position: relative;
+  @include responsive(tablet) {
+    padding: 36px 30px 20px;
+  }
+  @include responsive(mobile_l) {
+    justify-content: flex-start;
+  }
+  @include responsive(mobile_s) {
+    padding: 24px 16px 20px;
+  }
+  &Title {
+    font-weight: 700;
+    color: $VeryDarkGrayishBlue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    @include responsive(tablet) {
+      line-height: 1.5;
+    }
+    @include responsive(mobile_l) {
+      margin-bottom: 12px;
+    }
+    @include responsive(mobile_s) {
+      font-size: 16px;
+    }
+  }
+  &Text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $DesaturatedDarkBlue;
+    margin-bottom: 16px;
+    @include responsive(tablet) {
+      line-height: 1.55;
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+    @include responsive(mobile_l) {
+      letter-spacing: -0.03em;
+      font-size: 13px;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  &Avatar {
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  &Author {
+    &Name {
+      color: $VeryDarkGrayishBlue;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    &Date {
+      color: $GrayishBlue;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+  }
+  &Button {
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+
+    @include center;
+    background-color: lighten($DesaturatedDarkBlue, 40%);
+    color: $DesaturatedDarkBlue;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    &:hover,
+    &.btnActive {
+      background-color: $DesaturatedDarkBlue;
+      color: $LightGrayishBlue;
+    }
+    &:active {
+      background-color: darken($DesaturatedDarkBlue, 15%);
+      color: darken($LightGrayishBlue, 15%);
+    }
+  }
+}
+
+.share {
+  position: relative;
+  margin-left: auto;
+  @include responsive(tablet) {
+    position: unset;
+  }
+  &Button {
+    display: none;
+    @include responsive(tablet) {
+      margin-left: auto;
+      visibility: visible;
+      display: block;
+    }
+  }
+  &Container {
+    position: absolute;
+    right: -104px;
+    bottom: 60px;
+    background-color: $VeryDarkGrayishBlue;
+    padding: 21px 34px 19px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    @include responsive(laptop) {
+      border-bottom-right-radius: 0;
+      right: 16px;
+    }
+    @include responsive(tablet) {
+      border-bottom-right-radius: 10px;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+    @include responsive(mobile_s){
+      padding: 21px 16px 19px;
+    }
+    &:after {
+      content: "";
+      border: 20px solid transparent;
+      border-top-color: $VeryDarkGrayishBlue;
+      border-bottom: 0;
+      bottom: 0;
+      position: absolute;
+      left: calc(50% + 5px);
+      width: 0;
+      height: 0;
+      margin-left: -20px;
+      margin-bottom: -20px;
+      @include responsive(laptop) {
+        left: unset;
+        right: 0;
+        border-top-color: $VeryDarkGrayishBlue;
+        border-right: 0;
+        margin-left: -10px;
+        margin-bottom: -20px;
+      }
+      @include responsive(tablet) {
+        display: none;
+      }
+    }
+  }
+  &Item {
+    color: $LightGrayishBlue;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 20px;
+    @include responsive(mobile_s){
+      margin-right: auto;
+    }
+    &:hover {
+      color: darken($LightGrayishBlue, 33%);
+    }
+  }
+
+  &Item.icon {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,65 @@
+.enter {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10%);
+}
+
+.enterActive {
+  opacity: 1;
+  visibility: visible;
+  transition: all 400ms ease-in-out;
+  transform: translateY(0);
+}
+
+.exit {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.exitActive {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms ease-in-out;
+  transform: translateY(-10%);
+}
+
+/*
+
+.slideEnter {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.slideEnterActive {
+  opacity: 1;
+  visibility: visible;
+  transition: all 200ms ease-in-out;
+  transform: translateY(0);
+}
+
+.slideExit {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.slideExitActive {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms ease-in-out;
+  transform: translateY(10px);
+}
+
+
+mode="out-in"
+timeout={400}
+classNames={{
+  enter: animation.slideEnter,
+  enterActive: animation.slideEnterActive,
+  exit: animation.slideExit,
+  exitActive: animation.slideExitActive,
+}}
+
+*/

@@ -1,0 +1,95 @@
+@import "../../../styles/auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap");
+// Primary
+$Red: hsl(0, 100%, 74%);
+// Neutral
+$GrayishBlue: hsl(246, 25%, 77%);
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  @include responsive(tablet){
+    height: auto;
+  }
+}
+
+.container {
+  width: 1440px;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 165px;
+  background: url("./bg-intro-desktop.png"), $Red;
+  box-shadow: 0 0 30px rgba(#000, 0.4);
+  @include responsive(laptop_l) {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 11.45vw;
+  }
+  @include responsive(laptop){
+    padding: 0 80px;
+  }
+  @include responsive(tablet){
+    flex-direction: column;
+    height: auto;
+    padding: 90px 24px 70px;
+    background: url("./bg-intro-mobile.png"), $Red;
+  }
+}
+.first {
+  width: 100%;
+  margin-right: 30px;
+  flex: 1;
+  color: white;
+  @include responsive(tablet){
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+}
+.titulo {
+  font-size: 50px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  @include responsive(tablet){
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+}
+.texto {
+  font-size: 16px;
+}
+.second {
+  flex: 1;
+  width: 100%;
+}
+.button {
+  margin-bottom: 24px;
+  @include responsive(tablet){
+    padding-right: 75px;
+    padding-left: 75px;
+  }
+  @include responsive(mobile_s){
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.agree {
+  margin-top: 16px;
+  font-size: 11px;
+  text-align: center;
+  color: $GrayishBlue;
+  &Link {
+    font-weight: 700;
+    color: $Red;
+    text-decoration: none;
+  }
+}

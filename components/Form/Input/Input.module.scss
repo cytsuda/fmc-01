@@ -1,0 +1,61 @@
+@import "../../../styles/auxiliar";
+
+// Primary
+$Red: hsl(0, 100%, 74%);
+// Accent
+$Blue: hsl(248, 32%, 49%);
+// Neutral
+$DarkBlue: hsl(249, 10%, 26%);
+$GrayishBlue: hsl(246, 25%, 77%);
+
+.container{
+  margin-bottom: 20px;
+  position: relative;
+  transition: all .2s ease-in-out;
+}
+
+.input{
+  width: 100%;
+  font-size: 14px;
+  padding: 19px 32px 16px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid $GrayishBlue;
+  color: $DarkBlue;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  &:active, &:focus{
+    border-color: $DarkBlue;
+  }
+  &::placeholder{
+    color: $GrayishBlue;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+  }
+  &.inputError{
+    border-color: $Red;
+  }
+}
+
+.error{
+  font-size: 10px;
+  font-weight: 600;
+  font-style: italic;
+  color: $Red;
+  margin-top: 7px;
+  text-align: right;
+}
+
+.icon{
+  height: 24px;
+  width: 24px;
+  color: white;
+  background-color: $Red;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 24px;
+}

@@ -1,0 +1,131 @@
+@import "../../styles/auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap");
+
+$corLight: #34495e;
+$corDark: #2c3e50;
+$corClara: #ecf0f1;
+$corCinza: #95a5a6;
+
+.modal {
+  height: auto;
+  width: 30%;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  z-index: 999;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  visibility: hidden;
+  font-family: "Raleway", sans-serif;
+
+  &Top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 15px;
+    background-color: $corDark;
+    border-bottom: 1px solid $corClara;
+    &Title {
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 900;
+      color: lighten($corDark, 60%);
+    }
+    &Control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 20px;
+      height: 30px;
+      width: 30px;
+      color: $corCinza;
+      background-color: lighten($corLight, 5%);
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      outline: none;
+      &:hover {
+        background-color: lighten($corLight, 10%);
+        color: $corClara;
+      }
+    }
+  }
+  &Center {
+    background-color: lighten($corDark, 70%);
+    font-weight: 400;
+    color: $corDark;
+    font-size: 18px;
+    padding: 40px 20px;
+    flex: 1;
+  }
+  &Bottom {
+    background-color: $corDark;
+    border-top: 1px solid $corClara;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 20px;
+  }
+}
+.button {
+  padding: 10px 20px;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  color: lighten($corDark, 60%);
+  background-color: darken($corLight, 15%);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: lighten($corLight, 5%);
+    color: lighten($corDark, 70%);
+  }
+}
+
+.enterActive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(50%, -70%);
+  @include responsive(mobile_l) {
+    transform: translate(50%, -70%);
+  }
+}
+
+.enterDone {
+  opacity: 1;
+  visibility: visible;
+  transition: all 200ms ease-in-out;
+  transform: translate(50%, -50%);
+  @include responsive(mobile_l) {
+    transform: translate(50%, -50%);
+  }
+}
+
+.exitActive {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(50%, -50%);
+  @include responsive(mobile_l) {
+    transform: translate(50%, -50%);
+  }
+}
+
+.exitDone {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms ease-in-out;
+
+  transform: translate(50%, -70%);
+  @include responsive(mobile_l) {
+    transform: translate(50%, -70%);
+  }
+}

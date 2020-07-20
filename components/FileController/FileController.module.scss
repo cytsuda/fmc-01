@@ -1,0 +1,43 @@
+@import "../../styles/auxiliar";
+
+.control {
+  height: 200px;
+  min-width: 350px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top-right-radius: 100px;
+  @include responsive(tablet){
+    width: 100%;
+    max-width: unset;
+    min-width: unset;
+  }
+  @include responsive(mobile_l){
+    margin-bottom: 16px;
+  }
+  &Logo {
+
+  }
+  
+  &Icons {
+    display:flex;
+  }
+  &Icon{
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-right: 16px;
+    cursor: pointer;
+    @include center;
+    transition: all .2s;
+    &:hover{
+      filter: contrast(90%);
+    }
+    &:active{
+      filter: brightness(90%);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.enterActive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(25px);
+}
+.enterDone {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 0.2s ease-in-out;
+}
+.exitActive {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.exitDone {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-25px);
+  transition: all 0.2s ease-in-out;
+}

@@ -1,0 +1,238 @@
+@import "../../../styles/auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+$DesaturatedRed: hsl(0, 36%, 70%);
+$SoftRed: hsl(0, 93%, 68%);
+$DarkGrayishRed: hsl(0, 6%, 24%);
+
+$LinearGradientWhite: linear-gradient(
+  135deg,
+  hsl(0, 0%, 100%),
+  hsl(0, 100%, 98%)
+);
+$LinearGradientPink: linear-gradient(
+  135deg,
+  hsl(0, 80%, 86%),
+  hsl(0, 80%, 86%) 25%,
+  hsl(0, 74%, 74%) 50%,
+  hsl(0, 80%, 86%) 75%,
+  hsl(0, 80%, 86%)
+);
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color:  hsl(0, 80%, 86%);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  height: 800px;
+  width: 1440px;
+  background: url("./bg-pattern-desktop.svg"), $LinearGradientWhite;
+  box-shadow: 0 0 20px rgba(#000, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 165px;
+  padding-top: 65px;
+  padding-bottom: 140px;
+  @include responsive(laptop_l){
+    width: 100vw;
+    height: 100%;
+    padding-left:11.6vw; 
+  }
+  @include responsive(laptop){
+    padding: 0;
+  }
+}
+
+.logo {
+  margin-bottom: 135px;
+  @include responsive(laptop){
+    padding: 32px;
+    margin-bottom: 0;
+  }
+}
+
+.text {
+  max-width: 430px;
+  color: $DarkGrayishRed;
+  @include responsive(laptop){
+    margin-left: 50vw;
+    margin-top: 10vh;
+    max-width: 45vw;
+  }
+  @include responsive(tablet){
+    margin-left: 48vw;
+  }
+  @include responsive(mobile_l){
+    margin: 65px 36px 0;
+    width: calc(100% - 72px);
+    max-width: unset;
+  }
+  &Title {
+    font-size: 62px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    line-height: 1;
+    margin-bottom: 10px;
+    @include responsive(tablet){
+      font-size: 50px;
+    }
+    @include responsive(mobile_l){
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    &First {
+      font-weight: 300;
+      color: $DesaturatedRed;
+    }
+    &Second {
+      font-weight: 600;
+      display: block;
+    }
+  }
+  &Text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-bottom: 40px;
+    @include responsive(tablet){
+      font-size: 16px;
+    }
+    @include responsive(mobile_l){
+      text-align: center;
+    }
+  }
+}
+
+.input {
+  width: 450px;
+  position: relative;
+  
+  @include responsive(laptop){
+    margin-left: 50vw;
+    max-width: 45vw;
+  }
+  @include responsive(tablet){
+    margin-left: 48vw;
+  }
+  @include responsive(mobile_l){
+    margin:0 auto;
+    max-width: unset;
+    width: calc(100vw - 72px);
+  }
+  &Box {
+    padding: 0px 32px;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid $DesaturatedRed;
+    z-index: 1;
+    outline: none;
+    border-radius: 50px;
+    overflow: hidden;
+    font-weight: 400;
+    font-family: "Josefin Sans", sans-serif;
+    color: $DarkGrayishRed;
+    background-color: transparent;
+    transition: all .8 ease-in-out;
+    &::placeholder {
+      color: $DesaturatedRed;
+    }
+    &.error{
+      border-color: $SoftRed;
+    }
+  }
+  &Button {
+    top: -2px;
+    right: 0;
+    height: 54px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: $LinearGradientPink;
+    color: white;
+    font-size: 32px;
+    background-size: 400%;
+    background-position-x: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 5px rgba($DarkGrayishRed, 0.5);
+    &:disabled{
+      background-position-x: 0;
+      &:hover{
+        background-position-x: 0;
+        transform: translate(0,0);
+        box-shadow: 0 0 5px rgba($DarkGrayishRed, 0.5);
+      }
+    }
+    &:hover {
+      background-position-x: 50%;
+      transform: translate(2px, -2px);
+      box-shadow: -2px 2px 5px rgba($DarkGrayishRed, 0.5);
+    }
+  }
+  &Error {
+    position: absolute;
+    left: 32px;
+    bottom: -22px;
+    font-size: 13px;
+    color: $DesaturatedRed;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &Icon{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $SoftRed;
+    color: #fff;
+    border-radius: 30px;
+    top: 13px;
+    right: 115px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.image {
+  background: url("./hero-desktop.jpg");
+  width: 610px;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include responsive(laptop_l){
+    width: 42.36vw;
+    height: 100vh;
+    background-size: cover;
+  }
+  @include responsive(laptop){
+    top: 104px;
+    left: 0;
+    width: 45vw;
+    height: calc(100vh - 104px);
+  }
+  @include responsive(mobile_l){
+    background: url("./hero-mobile.jpg");
+    position: relative;
+    width: 100vw;
+    height: 250px;
+    top: 0;
+  }
+}

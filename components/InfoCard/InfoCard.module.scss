@@ -1,0 +1,49 @@
+@import "../../styles/auxiliar";
+
+.card {
+  height: 250px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(#000, 0.2);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  display:flex;
+  flex-direction: column;
+  
+  @include responsive(laptop_l){
+    max-width: 350px;
+    height: auto;
+    width: auto;
+  }
+  @include responsive(tablet){
+    margin-bottom: 24px;
+  }
+
+  &:before{
+    height: 4px;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &Titulo{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &Text{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  &Icon{
+    margin-left: auto;
+    margin-top: auto;
+    @include responsive(laptop){
+      width: 57px;
+      height: 57px;
+    }
+  }
+}
