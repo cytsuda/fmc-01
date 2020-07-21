@@ -50,14 +50,14 @@ const ArticlePreview = (props) => {
             </button>
             <CSSTransition in={open} timeout={200} classNames={animation}>
               <div className={styles.shareContainer}>
-                <a className={styles.shareItem}>SHARE</a>
-                <a className={clsx(styles.shareItem, styles.icon)}>
+                <a onClick={props.modal} className={styles.shareItem}>SHARE</a>
+                <a onClick={props.modal} className={clsx(styles.shareItem, styles.icon)}>
                   <IoLogoFacebook />
                 </a>
-                <a className={clsx(styles.shareItem, styles.icon)}>
+                <a onClick={props.modal} className={clsx(styles.shareItem, styles.icon)}>
                   <IoLogoTwitter />
                 </a>
-                <a className={clsx(styles.shareItem, styles.icon)}>
+                <a onClick={props.modal} className={clsx(styles.shareItem, styles.icon)}>
                   <IoLogoPinterest />
                 </a>
                 <button

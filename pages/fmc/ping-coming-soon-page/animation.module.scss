@@ -1,0 +1,32 @@
+@import "../../../styles/auxiliar";
+
+.enter{
+  opacity: 0;
+  visibility: hidden;
+  @include responsive(mobile_l){
+    height: 0;
+  }
+}
+.enterActive {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s ease-in-out;
+  @include responsive(mobile_l) {
+    height: 35px;
+  }
+}
+.exit{
+  opacity: 1;
+  visibility: visible;
+  @include responsive(mobile_l) {
+    height: 35px;
+  }
+}
+.exitActive {
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  @include responsive(mobile_l){
+    height: 0;
+  }
+}

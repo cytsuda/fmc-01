@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "./styles.module.scss";
 
@@ -28,10 +28,10 @@ const Main = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
   const handleModalOpen = () => {
     setModalOpen(true);
-  }
+  };
   const handleModalClose = () => {
     setModalOpen(false);
-  }
+  };
   return (
     <React.Fragment>
       <Head>
@@ -39,8 +39,13 @@ const Main = (props) => {
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <Backdrop show={modalOpen}>
-        <Modal title="Botões desativados" open={modalOpen} close={handleModalClose}>
-          O botão funciona mas não possui nenhuma utilidade.
+        <Modal
+          title="Buttons disabled"
+          open={modalOpen}
+          close={handleModalClose}
+        >
+          This functionality has not been implemented, it is just a way of
+          showing interaction
         </Modal>
         <main className={styles.main}>
           <div className={styles.container}>

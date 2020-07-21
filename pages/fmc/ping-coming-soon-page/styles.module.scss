@@ -1,0 +1,217 @@
+@import "../../../styles/auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300&display=swap");
+// Primary
+$Blue: hsl(223, 87%, 63%);
+// Secondary
+$PaleBlue: hsl(223, 100%, 88%);
+$LightRed: hsl(354, 100%, 66%);
+// Neutral
+$Gray: hsl(0, 0%, 59%);
+$VeryDarkBlue: hsl(209, 33%, 12%);
+
+.main {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf0f1;
+  padding: 80px 0;
+  @include responsive(laptop_l) {
+    padding: 0;
+  }
+}
+.container {
+  font-family: "Libre Franklin", sans-serif;
+  width: 1440px;
+  background-color: #fff;
+  box-shadow: 0 0 25px rgba(#000, 0.2);
+  padding: 90px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include responsive(laptop_l) {
+    width: 100%;
+  }
+  @include responsive(mobile_l) {
+    padding: 85px 0 40px;
+  }
+}
+.logo {
+  width: auto;
+  margin-bottom: 50px;
+  @include responsive(mobile_l) {
+    margin-bottom: 42px;
+  }
+}
+.titulo {
+  font-size: 50px;
+  font-weight: 300;
+  color: $Gray;
+  margin-bottom: 24px;
+  &Negrito {
+    font-weight: 700;
+    color: $VeryDarkBlue;
+  }
+  @include responsive(tablet) {
+    font-size: 42px;
+  }
+  @include responsive(mobile_l) {
+    font-size: 22px;
+    margin-bottom: 22px;
+  }
+}
+
+.subtitulo {
+  font-size: 20px;
+  color: $VeryDarkBlue;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 42px;
+  @include responsive(mobile_l) {
+    font-size: 12px;
+    margin-bottom: 32px;
+  }
+}
+
+.email {
+  width: 640px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 85px;
+  position: relative;
+
+  @include responsive(tablet) {
+    flex: 1;
+    width: 100vw;
+    padding: 0 40px;
+  }
+
+  @include responsive(mobile_l) {
+    padding: 0 28px;
+    margin-bottom: 0;
+    flex-direction: column;
+    min-height: 160px;
+    justify-content: flex-start;
+  }
+
+  &Input {
+    margin-right: 16px;
+    flex: 2;
+    font-size: 16px;
+    padding: 20px 30px;
+    border-radius: 100px;
+    outline: none;
+    border: 1px solid $PaleBlue;
+    color: $VeryDarkBlue;
+    transition: border 0.2s ease-in-out;
+    @include responsive(mobile_l) {
+      font-size: 12px;
+      padding: 14px 32px;
+      margin: 0 0 10px;
+      flex: none;
+    }
+    &::placeholder {
+      font-size: 16px;
+      color: $PaleBlue;
+      @include responsive(mobile_l) {
+        font-size: 12px;
+      }
+    }
+    &.error {
+      border-color: $LightRed;
+      color: $LightRed;
+    }
+  }
+  &Error {
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    color: $LightRed;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 12px;
+    @include responsive(tablet) {
+      left: 70px;
+    }
+    @include responsive(mobile_l) {
+      position: relative;
+      left: unset;
+      bottom: unset;
+      text-align: center;
+      align-self: flex-start;
+      height: 35px;
+      margin: 0 auto;
+    }
+  }
+  &Button {
+    flex: 1;
+    background-color: $Blue;
+    color: white;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 5px 10px rgba($Blue, 0.75);
+    &:hover {
+      transform: translate(2px, -2px);
+      box-shadow: -2px 7px 10px rgba($Blue, 0.75);
+    }
+    &:disabled {
+      background-color: lighten($Blue, 10%);
+      cursor: not-allowed;
+      box-shadow: -2px 3px 10px rgba($Blue, 0.75);
+      &:hover {
+        transform: none;
+      }
+    }
+    @include responsive(mobile_l) {
+      font-size: 12px;
+      padding: 14px 0;
+      flex: none;
+    }
+  }
+}
+
+.imagem {
+  width: 640px;
+  margin-bottom: 75px;
+
+  @include responsive(tablet) {
+    width: 100%;
+    padding: 0 40px;
+  }
+  @include responsive(mobile_l) {
+    padding: 0 28px;
+    margin-bottom: 130px;
+  }
+}
+
+.social {
+  display: flex;
+  margin-bottom: 27px;
+  &Icons {
+    border: 1px solid $PaleBlue;
+    color: $Blue;
+    font-size: 14px;
+    height: 31px;
+    width: 31px;
+    @include center();
+    margin: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    &:hover {
+      background-color: $PaleBlue;
+    }
+  }
+}
+.copy {
+  color: #969696;
+  font-size: 12px;
+  @include responsive(mobile_l) {
+    font-size: 10px;
+  }
+}
