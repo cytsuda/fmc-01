@@ -41,3 +41,7 @@ Fim: 14:46
 Inicio: 16:06
 
 Inicio da pausa: 18:11
+
+18/07/2020 - Frontend Mentor 06 - Intro component with sign-up form
+20/07/2020 - Frontend Mentor 07 - Single price grid component
+single-price-grid-component

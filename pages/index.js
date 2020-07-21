@@ -9,7 +9,9 @@ const idLink = [
   "coding-bootcamp-testimonials-slider",
   "four-card-feature-section",
   "base-apparel-coming-soon-page",
-  "intro-component-with-sign-up-form"
+  "intro-component-with-sign-up-form",
+  "single-price-grid-component",
+  "ping-coming-soon-page"
 ];
 export default function Home() {
   return (

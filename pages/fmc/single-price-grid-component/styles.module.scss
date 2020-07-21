@@ -1,0 +1,18 @@
+@import "../../../styles/auxiliar";
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$LightGray: hsl(204, 43%, 93%);
+$fontFamily: 'Karla', sans-serif;
+
+.main{
+  height: 100vh;
+  width: 100vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $LightGray;
+  font-family: $fontFamily;
+  @include responsive(tablet){
+    height: auto;
+  }
+}

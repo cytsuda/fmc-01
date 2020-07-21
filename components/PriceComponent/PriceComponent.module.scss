@@ -1,0 +1,131 @@
+@import "../../styles/auxiliar";
+// Primary
+$Cyan: hsl(179, 62%, 43%);
+$BrightYellow: hsl(71, 73%, 54%);
+// Neutral
+$LightGray: hsl(204, 43%, 93%);
+$GrayishBlue: hsl(218, 22%, 67%);
+
+.container {
+  width: 635px;
+  height: auto;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  line-height: 1;
+  @include responsive(tablet) {
+    display: flex;
+    flex-direction: column;
+    margin: 72px 32px;
+    width: auto;
+  }
+}
+
+.main,
+.price,
+.features {
+  padding: 40px;
+  @include responsive(tablet) {
+    padding: 32px;
+  }
+  @include responsive(mobile_l) {
+    padding: 24px;
+  }
+}
+
+.main {
+  background-color: #fff;
+  grid-column: 1 / -1;
+  &Titulo {
+    font-weight: 700;
+    font-size: 24px;
+    color: $Cyan;
+    margin-bottom: 25px;
+  }
+  &Subtitulo {
+    font-weight: 400;
+    font-size: 18px;
+    color: $BrightYellow;
+    margin-bottom: 17px;
+  }
+  &Texto {
+    font-size: 16px;
+    font-weight: 400;
+    color: $GrayishBlue;
+    line-height: 1.85;
+    &Span {
+      display: block;
+      @include responsive(mobile_l) {
+        display: unset;
+      }
+    }
+  }
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 22px;
+}
+
+.price {
+  background-color: $Cyan;
+  &Info {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 12px;
+    &Value {
+      font-size: 32px;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    &Text {
+      color: rgba(#fff, 0.7);
+    }
+  }
+  &Text {
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  &Button {
+    margin-top: auto;
+    padding: 17px 0 15px;
+    background-color: $BrightYellow;
+    color: white;
+    font-weight: 700;
+    font-family: "Karla", sans-serif;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out .2s;
+    &:hover{
+      transform: translate(2px,-2px);
+      box-shadow: -2px 7px 5px rgba(0, 0, 0, 0.1);
+    }
+    &:active{
+      transform: none;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+      background-color: darken($BrightYellow, 10%);
+    }
+  }
+}
+.features {
+  background-color: lighten($Cyan, 5%);
+  &List {
+    list-style: none;
+  }
+  &Item {
+    font-size: 14px;
+    color: rgba(#fff, 0.75);
+    letter-spacing: -0.01em;
+    &:not(:last-of-type) {
+      margin-bottom: 6px;
+    }
+  }
+}
