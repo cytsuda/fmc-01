@@ -1,0 +1,66 @@
+@import "../.././../../styles/auxiliar";
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$DesaturatedDarkBlue: hsl(214, 17%, 51%);
+$GrayishBlue: hsl(212, 23%, 69%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+.modal{
+  min-width: 280px;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Manrope", sans-serif;
+  display:flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(#000,.5);
+}
+.top{
+  padding: 20px 30px 10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $LightGrayishBlue;
+}
+.icon{
+  font-size: 80px;
+  margin-bottom: 10px;
+  color: #A09568;
+}
+.titulo{
+  border-top: 1px solid rgba($GrayishBlue,.2);
+  border-bottom: 1px solid rgba($GrayishBlue,.2);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: $VeryDarkGrayishBlue;
+  text-align: center;
+  width: 100%;
+}
+.texto{
+  margin: 10px auto 20px;
+  text-align: center;
+  color: $GrayishBlue;
+}
+.button{
+  width: 100%;
+  color: $LightGrayishBlue;
+  background-color: $VeryDarkGrayishBlue;
+  border:none;
+  outline: none;
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor:pointer;
+  transition: all .2s ease-in-out;
+  &:hover{
+    background-color: darken($VeryDarkGrayishBlue, 10%);
+    color: darken($LightGrayishBlue, 5%)
+  }
+}

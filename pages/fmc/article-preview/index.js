@@ -1,10 +1,10 @@
-import {useState} from "react";
+import { useState } from "react";
 import Head from "next/head";
 import ArticlePreview from "../../../components/ArticlePreview/ArticlePreview";
 import styles from "./style.module.scss";
 
 import Backdrop from "../../../components/Backdrop/Backdrop";
-import Modal from "../../../components/Modal/Modal";
+import Modal from "./Modal/Modal";
 
 export default function Main(props) {
   const articleData = {
@@ -15,15 +15,15 @@ export default function Main(props) {
     author: "Michelle Appleton",
     date: "28 Jun 2020",
     thumbnail: "drawers.jpg",
-    authorPhoto: "avatar-michelle.jpg"
+    authorPhoto: "avatar-michelle.jpg",
   };
   const [modal, setModal] = useState(false);
   const modalOpenHandle = () => {
     setModal(true);
-  }
+  };
   const modalCloseHandle = () => {
-    setModal(false)
-  }
+    setModal(false);
+  };
   return (
     <React.Fragment>
       <Head>
@@ -31,11 +31,13 @@ export default function Main(props) {
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <Backdrop show={modal}>
-        <Modal title="Sharing button is disabled" open={modal} close={modalCloseHandle}>
-        This functionality has not been implemented, it is just a way of showing interaction
-        </Modal>
+        <Modal
+          title="Sharing button is disabled"
+          open={modal}
+          close={modalCloseHandle}
+        />
         <div className={styles.container}>
-          <ArticlePreview data={articleData} modal={modalOpenHandle}/>
+          <ArticlePreview data={articleData} modal={modalOpenHandle} />
         </div>
       </Backdrop>
     </React.Fragment>

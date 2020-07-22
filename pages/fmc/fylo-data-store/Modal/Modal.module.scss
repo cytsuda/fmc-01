@@ -50,4 +50,10 @@ $VeryDarkBlue: hsl(229, 57%, 11%);
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  &:hover{
+    background-color: darken($PaleBlue, 10%);
+    color: darken($DarkBlue,10%);
+  }
 }
