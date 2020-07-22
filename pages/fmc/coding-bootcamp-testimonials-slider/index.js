@@ -1,13 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import styles from "./style.module.scss";
-import clsx from "clsx";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import slideUp from "./slideUp.module.scss";
 import slideLeft from "./slideLeft.module.scss";
 import slideRight from "./slideRight.module.scss";
-
 const testimonials = [
   {
     id: 0,
@@ -28,15 +26,34 @@ const testimonials = [
 
 export default function Main(props) {
   const [slideId, setSlideId] = useState(0);
-  const [direction, setDirection] = useState(0);
+  function downHandler({ key }) {
+    if (key === "ArrowRight") {
+      nextSlide("right");
+    }
+  }
+  const upHandler = ({ key }) => {
+    if (key === "ArrowLeft") {
+      nextSlide("left");
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("keydown", downHandler);
+    window.addEventListener("keyup", upHandler);
+    return () => {
+      window.removeEventListener("keydown", downHandler);
+      window.removeEventListener("keyup", upHandler);
+    };
+  }, [slideId]);
+
   const nextSlide = (dir) => {
-    if (dir === "left" && slideId !== 0) {
+    if (dir === "left" && slideId > 0) {
       setSlideId((prev) => prev - 1);
     }
-    if (dir === "right" && slideId !== testimonials.length - 1) {
+    if (dir === "right" && slideId < testimonials.length - 1) {
       setSlideId((prev) => prev + 1);
     }
   };
+
   return (
     <React.Fragment>
       <Head>
@@ -53,7 +70,11 @@ export default function Main(props) {
             </SwitchTransition>
 
             <SwitchTransition mode="out-in">
-              <CSSTransition key={slideId} timeout={400} classNames={slideRight}>
+              <CSSTransition
+                key={slideId}
+                timeout={400}
+                classNames={slideRight}
+              >
                 <div className={styles.author}>
                   <p className={styles.authorName}>
                     {testimonials[slideId].autor}

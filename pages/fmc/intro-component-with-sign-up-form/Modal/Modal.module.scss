@@ -1,0 +1,86 @@
+@import "../../../../styles/auxiliar";
+
+// Primary
+$Red: hsl(0, 100%, 74%);
+// Neutral
+$GrayishBlue: hsl(246, 25%, 77%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+
+.modal {
+  position: fixed;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  z-index: 999;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  visibility: hidden;
+  font-family: "Poppins", sans-serif;
+  transform: translate(50%, -50%);
+  &.blue {
+    background-color: $Blue;
+  }
+  &.green {
+    background-color: $Green;
+  }
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 20px 25px;
+  color: white;
+}
+.icon {
+  font-size: 50px;
+  margin: 0 auto 20px;
+}
+
+.msg {
+  font-size: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.button {
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border:none;
+  color: #333;
+  outline: none;
+}
+
+.enterDone {
+  opacity: 1;
+  visibility: visible;
+  transition: all 200ms ease-in-out;
+  transform: translate(50%, -50%);
+  @include responsive(mobile_l) {
+    transform: translate(50%, -50%);
+  }
+}
+
+.exitActive {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(50%, -50%);
+  @include responsive(mobile_l) {
+    transform: translate(50%, -50%);
+  }
+}
+
+.exitDone {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms ease-in-out;
+
+  transform: translate(50%, -70%);
+  @include responsive(mobile_l) {
+    transform: translate(50%, -70%);
+  }
+}

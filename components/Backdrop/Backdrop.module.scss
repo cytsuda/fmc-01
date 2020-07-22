@@ -16,9 +16,6 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  @include responsive(mobile_l) {
-    transform: translate(-50%, 10px);
-  }
 }
 
 .enterDone {
@@ -26,18 +23,12 @@
   visibility: visible;
   transition: all 200ms ease-in-out;
   transform: translateY(0);
-  @include responsive(mobile_l) {
-    transform: translate(-50%, 0);
-  }
 }
 
 .exitActive {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  @include responsive(mobile_l) {
-    transform: translate(-50%, 0);
-  }
 }
 
 .exitDone {
@@ -45,7 +36,4 @@
   visibility: hidden;
   transition: all 200ms ease-in-out;
   transform: translateY(10px);
-  @include responsive(mobile_l) {
-    transform: translate(-50%, 10px);
-  }
 }

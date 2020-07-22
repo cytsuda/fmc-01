@@ -8,7 +8,7 @@ import { MdInsertDriveFile, MdFolder, MdCloudUpload } from "react-icons/md";
 import FileController from "../../../components/FileController/FileController";
 import FileProgressStatus from "../../../components/FileProgressStatus/FileProgressStatus";
 import Backdrop from "../../../components/Backdrop/Backdrop";
-import Modal from "../../../components/Modal/Modal";
+import Modal from "./Modal/Modal";
 
 const Main = (props) => {
   const icons = [
@@ -39,14 +39,7 @@ const Main = (props) => {
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <Backdrop show={modalOpen}>
-        <Modal
-          title="Buttons disabled"
-          open={modalOpen}
-          close={handleModalClose}
-        >
-          This functionality has not been implemented, it is just a way of
-          showing interaction
-        </Modal>
+        <Modal open={modalOpen} close={handleModalClose} />
         <main className={styles.main}>
           <div className={styles.container}>
             <FileController

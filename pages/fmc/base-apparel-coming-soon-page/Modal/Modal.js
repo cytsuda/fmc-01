@@ -1,20 +1,16 @@
 import React from "react";
 import { GiHeartWings } from "react-icons/gi";
-import styles from "./Modal.module.scss";
-
 import { CSSTransition } from "react-transition-group";
+
+import styles from "./Modal.module.scss";
+import animations from "../../../api/animation.module.scss";
 const Modal = (props) => {
   // props.open
   return (
     <CSSTransition
       in={props.open}
       timeout={200}
-      classNames={{
-        enterActive: styles.enterActive,
-        enterDone: styles.enterDone,
-        exitActive: styles.exitActive,
-        exitDone: styles.exitDone,
-      }}
+      classNames={animations}
     >
       <div className={styles.modal}>
         <div className={styles.modalTop}>

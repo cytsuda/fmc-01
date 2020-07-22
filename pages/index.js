@@ -28,7 +28,7 @@ export default function Home() {
             {idLink.map((item, index) => (
               <Link key={index} href={"/fmc/" + item} as={"/fmc/" + item}>
                 <a style={{ textTransform: "capitalize" }}>
-                  {index}. {item.replace(/-/g, " ")}
+                  {index+1}. {item.replace(/-/g, " ")}
                 </a>
               </Link>
             ))}

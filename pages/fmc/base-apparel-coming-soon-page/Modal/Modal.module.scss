@@ -16,6 +16,7 @@ $DarkGrayishRed: hsl(0, 6%, 24%);
   overflow: hidden;
   visibility: hidden;
   font-family: "Josefin Sans", sans-serif;
+  box-shadow: 0 0 30px rgba(#000, .5);
 
   &Top {
     background: $SoftRed;
@@ -58,44 +59,5 @@ $DarkGrayishRed: hsl(0, 6%, 24%);
       color: lighten($SoftRed, 5%);
       background: hsl(0, 80%, 93%);
     }
-  }
-}
-
-.enterActive {
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(50%, -70%);
-  @include responsive(mobile_l) {
-    transform: translate(50%, -70%);
-  }
-}
-
-.enterDone {
-  opacity: 1;
-  visibility: visible;
-  transition: all 200ms ease-in-out;
-  transform: translate(50%, -50%);
-  @include responsive(mobile_l) {
-    transform: translate(50%, -50%);
-  }
-}
-
-.exitActive {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(50%, -50%);
-  @include responsive(mobile_l) {
-    transform: translate(50%, -50%);
-  }
-}
-
-.exitDone {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 200ms ease-in-out;
-
-  transform: translate(50%, -70%);
-  @include responsive(mobile_l) {
-    transform: translate(50%, -70%);
   }
 }
