@@ -13,11 +13,6 @@ $VeryLightGray: hsl(0, 0%, 98%);
 
 .main {
   font-family: "Poppins", sans-serif;
-  width: 100vw;
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: $VeryDarkBlue;
   @include responsive(laptop_l){
     padding: 0;
@@ -25,10 +20,10 @@ $VeryLightGray: hsl(0, 0%, 98%);
 }
 
 .container {
-  width: 1440px;
+  width: 100vw;
   height: auto;
   background-color: $VeryLightGray;
-  padding: 75px 165px 80px;
+  padding: 75px 0 80px;
   box-shadow: 0 0 20px rgba($VeryDarkBlue, 0.2);
   display: flex;
   flex-direction: column;

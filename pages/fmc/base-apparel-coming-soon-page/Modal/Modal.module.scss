@@ -6,17 +6,16 @@ $DarkGrayishRed: hsl(0, 6%, 24%);
 .modal {
   position: fixed;
   height: auto;
-  position: fixed;
   top: 50%;
-  right: 50%;
+  left: 50%;
   z-index: 999;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  visibility: hidden;
   font-family: "Josefin Sans", sans-serif;
   box-shadow: 0 0 30px rgba(#000, .5);
+  transform: translate(-50%,-50%);
 
   &Top {
     background: $SoftRed;

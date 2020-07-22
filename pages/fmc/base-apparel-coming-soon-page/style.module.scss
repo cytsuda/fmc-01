@@ -25,8 +25,11 @@ $LinearGradientPink: linear-gradient(
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color:  hsl(0, 80%, 86%);
+  background-color: hsl(0, 80%, 86%);
   font-family: "Josefin Sans", sans-serif;
+  @include responsive(laptop) {
+    height: auto;
+  }
 }
 
 .container {
@@ -40,19 +43,22 @@ $LinearGradientPink: linear-gradient(
   padding-left: 165px;
   padding-top: 65px;
   padding-bottom: 140px;
-  @include responsive(laptop_l){
+  @include responsive(laptop_l) {
     width: 100vw;
-    height: 100%;
-    padding-left:11.6vw; 
+    height: auto;
+    padding-left: 11.6vw;
   }
-  @include responsive(laptop){
+  @include responsive(laptop) {
     padding: 0;
+  }
+  @include responsive(mobile_l) {
+    padding-bottom: 90px;
   }
 }
 
 .logo {
   margin-bottom: 135px;
-  @include responsive(laptop){
+  @include responsive(laptop) {
     padding: 32px;
     margin-bottom: 0;
   }
@@ -61,15 +67,15 @@ $LinearGradientPink: linear-gradient(
 .text {
   max-width: 430px;
   color: $DarkGrayishRed;
-  @include responsive(laptop){
+  @include responsive(laptop) {
     margin-left: 50vw;
     margin-top: 10vh;
     max-width: 45vw;
   }
-  @include responsive(tablet){
+  @include responsive(tablet) {
     margin-left: 48vw;
   }
-  @include responsive(mobile_l){
+  @include responsive(mobile_l) {
     margin: 65px 36px 0;
     width: calc(100% - 72px);
     max-width: unset;
@@ -80,10 +86,10 @@ $LinearGradientPink: linear-gradient(
     letter-spacing: 0.3em;
     line-height: 1;
     margin-bottom: 10px;
-    @include responsive(tablet){
+    @include responsive(tablet) {
       font-size: 50px;
     }
-    @include responsive(mobile_l){
+    @include responsive(mobile_l) {
       font-size: 40px;
       text-align: center;
       margin-bottom: 15px;
@@ -102,10 +108,10 @@ $LinearGradientPink: linear-gradient(
     font-weight: 400;
     line-height: 1.75;
     margin-bottom: 40px;
-    @include responsive(tablet){
+    @include responsive(tablet) {
       font-size: 16px;
     }
-    @include responsive(mobile_l){
+    @include responsive(mobile_l) {
       text-align: center;
     }
   }
@@ -114,16 +120,16 @@ $LinearGradientPink: linear-gradient(
 .input {
   width: 450px;
   position: relative;
-  
-  @include responsive(laptop){
+
+  @include responsive(laptop) {
     margin-left: 50vw;
     max-width: 45vw;
   }
-  @include responsive(tablet){
+  @include responsive(tablet) {
     margin-left: 48vw;
   }
-  @include responsive(mobile_l){
-    margin:0 auto;
+  @include responsive(mobile_l) {
+    margin: 0 auto;
     max-width: unset;
     width: calc(100vw - 72px);
   }
@@ -141,11 +147,11 @@ $LinearGradientPink: linear-gradient(
     font-family: "Josefin Sans", sans-serif;
     color: $DarkGrayishRed;
     background-color: transparent;
-    transition: all .8 ease-in-out;
+    transition: all 0.8 ease-in-out;
     &::placeholder {
       color: $DesaturatedRed;
     }
-    &.error{
+    &.error {
       border-color: $SoftRed;
     }
   }
@@ -170,11 +176,14 @@ $LinearGradientPink: linear-gradient(
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 0 5px rgba($DarkGrayishRed, 0.5);
-    &:disabled{
+    @include responsive(mobile_l) {
+      width: 68px;
+    }
+    &:disabled {
       background-position-x: 0;
-      &:hover{
+      &:hover {
         background-position-x: 0;
-        transform: translate(0,0);
+        transform: translate(0, 0);
         box-shadow: 0 0 5px rgba($DarkGrayishRed, 0.5);
       }
     }
@@ -192,12 +201,19 @@ $LinearGradientPink: linear-gradient(
     color: $DesaturatedRed;
     opacity: 0;
     visibility: hidden;
+    @include responsive(mobile_l) {
+      position: relative;
+      left: unset;
+      bottom: unset;
+      margin-top: 10px;
+      text-align: center;
+    }
   }
-  &Icon{
+  &Icon {
     position: absolute;
     height: 25px;
     width: 25px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: $SoftRed;
@@ -207,6 +223,9 @@ $LinearGradientPink: linear-gradient(
     right: 115px;
     opacity: 0;
     visibility: hidden;
+    @include responsive(mobile_l){
+      right: 80px;
+    }
   }
 }
 
@@ -217,18 +236,18 @@ $LinearGradientPink: linear-gradient(
   position: absolute;
   top: 0;
   right: 0;
-  @include responsive(laptop_l){
+  @include responsive(laptop_l) {
     width: 42.36vw;
     height: 100vh;
     background-size: cover;
   }
-  @include responsive(laptop){
+  @include responsive(laptop) {
     top: 104px;
     left: 0;
     width: 45vw;
     height: calc(100vh - 104px);
   }
-  @include responsive(mobile_l){
+  @include responsive(mobile_l) {
     background: url("./hero-mobile.jpg");
     position: relative;
     width: 100vw;

@@ -71,7 +71,7 @@ export default function Main(props) {
               <p className={styles.textText}>
                 Hello fellow shoppers! We're currently building our new fashion
                 store. Add your email below to stay up-to-date with
-                announcementsand our launch deals.
+                announcements and our launch deals.
               </p>
             </div>
             <form className={styles.input} onSubmit={onSubmitHandle}>
@@ -108,7 +108,7 @@ export default function Main(props) {
                 classNames={slideUp}
               >
                 <p className={styles.inputError}>
-                  Please provide a valid email
+                  {email===""?"If you want to keep up to date, enter your email":"Please provide a valid email"}
                 </p>
               </CSSTransition>
             </form>
