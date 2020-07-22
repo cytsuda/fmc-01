@@ -16,7 +16,7 @@ const Modal = (props) => {
     <GiCakeSlice className={styles.icon} />
   );
   return (
-    <CSSTransition in={props.show} timeout={200} classNames={animation}>
+    <CSSTransition in={props.show} timeout={200} classNames={animation} unmountOnExit>
       <div
         className={clsx(styles.modal, props.tipo ? styles.green : styles.blue)}
       >

@@ -20,12 +20,13 @@ $GrayishBlue: hsl(246, 25%, 77%);
 }
 
 .container {
-  width: 1440px;
-  height: 800px;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 165px;
+  padding: 0 calc(50vw - 550px);
   background: url("./bg-intro-desktop.png"), $Red;
   box-shadow: 0 0 30px rgba(#000, 0.4);
   @include responsive(laptop_l) {

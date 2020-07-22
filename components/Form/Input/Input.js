@@ -8,12 +8,13 @@ import animation from "./animations.module.scss";
 
 const Input = (props) => {
   const { index, item } = props;
-  const message =
-    item.type === "email"
-      ? "Looks like this is not an email"
-      : item.type === "password"
-      ? "Your password must be at least 8 characters long"
-      : `${item.name} cannot be empty`;
+  let msg  = `${item.texto} cannot be empty`;
+  if(item.type==='email' && item.value!==""){
+    msg = "Looks like this is not an email";
+  }
+  if(item.type=== "password" && item.value!==""){
+    msg ="Your password must be at least 8 characters long";
+  }
   return (
     <div className={styles.container} key={index}>
       <input
@@ -34,7 +35,7 @@ const Input = (props) => {
         timeout={400}
         classNames={animation}
       >
-        <p className={styles.error}>{message}</p>
+        <p className={styles.error}>{msg}</p>
       </CSSTransition>
 
       <CSSTransition
