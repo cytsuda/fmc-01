@@ -1,0 +1,53 @@
+@import "../.././../../styles/auxiliar";
+$LightBlue: hsl(228, 55%, 68%);
+$PaleBlue: hsl(243, 100%, 93%);
+$DarkBlue: hsl(228, 56%, 26%);
+$VeryDarkBlue: hsl(229, 57%, 11%);
+
+.modal {
+  width: 280px;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $DarkBlue;
+  font-family: "Raleway", sans-serif;
+  border-radius: 0 25px 0 0;
+  overflow: hidden;
+  color: $LightBlue;
+  box-shadow: 0 0 25px rgba($PaleBlue, .1);
+}
+.top {
+  padding: 15px 10px 20px;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  font-size: 60px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $VeryDarkBlue;
+}
+
+.text {
+  flex: 1;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.button {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: none;
+  outline: none;
+  border: none;
+  background-color: $PaleBlue;
+  color: $DarkBlue;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
