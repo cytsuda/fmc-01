@@ -29,18 +29,18 @@ const PriceComponent = (props) => {
         </div>
 
         <p className={styles.priceText}>Full access for less than $1 a day </p>
-        <Button className={styles.priceButton} onClick={()=>alert('Sign Up Button')}>Sign up</Button>
+        <Button className={styles.priceButton} onClick={()=>props.modalOpen(1)}>Sign up</Button>
       </div>
       <div className={styles.features}>
         <h3 className={styles.subtitle}>Why Us</h3>
         <ul className={styles.featuresList}>
-          <li className={styles.featuresItem}>Tutorials by industry experts</li>
-          <li className={styles.featuresItem}>Peer & expert code review</li>
-          <li className={styles.featuresItem}>Coding exercises</li>
-          <li className={styles.featuresItem}>Access to our GitHub repos</li>
-          <li className={styles.featuresItem}>Community forum</li>
-          <li className={styles.featuresItem}>Flashcard decks</li>
-          <li className={styles.featuresItem}>New videos every week</li>
+          <li className={styles.featuresItem} onClick={()=>props.modalOpen(0)}>Tutorials by industry experts</li>
+          <li className={styles.featuresItem} onClick={()=>props.modalOpen(0)}>Peer & expert code review</li>
+          <li className={styles.featuresItem} onClick={()=>props.modalOpen(0)}>Coding exercises</li>
+          <li className={styles.featuresItem} onClick={()=>props.modalOpen(0)}>Access to our GitHub repos</li>
+          <li className={styles.featuresItem} onClick={()=>props.modalOpen(0)}>Community forum</li>
+          <li className={styles.featuresItem} onClick={()=>props.modalOpen(0)}>Flashcard decks</li>
+          <li className={styles.featuresItem} onClick={()=>props.modalOpen(0)}>New videos every week</li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,58 @@
+@import "../../../../styles/auxiliar";
+
+// Primary
+$Cyan: hsl(179, 62%, 43%);
+$BrightYellow: hsl(71, 73%, 54%);
+// Neutral
+$LightGray: hsl(204, 43%, 93%);
+$GrayishBlue: hsl(218, 22%, 67%);
+
+.modal {
+  width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: $LightGray;
+  box-shadow: 0 0 20px rgba(#000, 0.4);
+}
+
+.top {
+  padding: 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  font-size: 70px;
+  color: $Cyan;
+}
+.titulo {
+  font-size: 24px;
+  color: $Cyan;
+}
+.subtitulo {
+  color: $GrayishBlue;
+}
+.button {
+  width: 100%;
+  padding: 20px 0;
+  outline: none;
+  border: none;
+  background-color: $Cyan;
+  color: $LightGray;
+  font-size: 18px;
+  vertical-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: darken($Cyan, 5%);
+    color: darken($LightGray, 5%);
+  }
+}
