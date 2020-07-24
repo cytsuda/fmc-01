@@ -1,0 +1,86 @@
+@import "../../../../styles//auxiliar";
+
+$Blue: hsl(223, 87%, 63%);
+$Gray: hsl(0, 0%, 59%);
+$Green: #2ecc71;
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  font-family: "Libre Franklin", sans-serif;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(#000,.2);
+  &.sign {
+    color: $Green;
+    & .icon {
+      background-color: $Green;
+    }
+    & .titulo {
+      border-bottom: 1px solid rgba($Green, 0.2);
+    }
+    & .button {
+      background-color: $Green;
+    }
+  }
+  &.social {
+    color: $Blue;
+    & .icon {
+      background-color: $Blue;
+    }
+    & .titulo {
+      border-bottom: 1px solid rgba($Blue, 0.2);
+    }
+    & .button {
+      background-color: $Blue;
+    }
+  }
+}
+
+.top {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.icon {
+  font-size: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.titulo {
+  padding: 20px 20px 10px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.texto {
+  padding: 10px 20px 20px;
+  text-align: center;
+  color: $Gray;
+}
+.button {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    filter: brightness(80%);
+  }
+}

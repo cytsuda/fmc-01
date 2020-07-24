@@ -11,7 +11,8 @@ const idLink = [
   "base-apparel-coming-soon-page",
   "intro-component-with-sign-up-form",
   "single-price-grid-component",
-  "ping-coming-soon-page"
+  "ping-coming-soon-page",
+  "huddle-landing-page-with-alternating-feature-blocks"
 ];
 export default function Home() {
   return (

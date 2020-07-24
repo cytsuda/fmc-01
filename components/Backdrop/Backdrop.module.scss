@@ -2,38 +2,12 @@
 
 .backdrop {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 50%;
+  left:  50%;
   width: 100vw;
   height: 100vh;
   background-color: rgba(22, 22, 22,.5);
   backdrop-filter: blur(3px);
   z-index: 99;
-  visibility: hidden;
-}
-
-.enterActive {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-}
-
-.enterDone {
-  opacity: 1;
-  visibility: visible;
-  transition: all 200ms ease-in-out;
-  transform: translateY(0);
-}
-
-.exitActive {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.exitDone {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 200ms ease-in-out;
-  transform: translateY(10px);
+  transform: translate(-50%,-50%);
 }

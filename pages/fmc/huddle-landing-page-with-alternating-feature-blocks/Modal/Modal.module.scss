@@ -1,0 +1,68 @@
+@import "../.././../../styles/auxiliar";
+
+$Pink: hsl(322, 100%, 66%);
+$VeryDarkCyan: hsl(192, 100%, 9%);
+$VeryPaleCyan: hsl(193, 100%, 96%);
+$FontText: "Open Sans", sans-serif;
+
+.modal {
+  width: 280px;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $VeryPaleCyan;
+  padding: 40px 0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba($VeryDarkCyan, 0.3);
+}
+.top{
+  display:flex;
+  padding: 0 20px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.icon{
+  color: $Pink;
+  font-size: 50px;
+  text-align: center;
+  margin-right: 20px;
+}
+.text{
+  font-size: 18px;
+  font-family: $FontText;
+  color:$VeryDarkCyan;
+  font-weight: 700;
+}
+
+.button {
+  width: auto;
+  font-family: $FontText;
+  font-weight: 700;
+  border-radius: 40px;
+  padding: 10px 70px 12px;
+  box-shadow: 0 0 5px rgba(#000, 0.2);
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  background-color: $Pink;
+  color: white;
+  @include responsive(mobile_l) {
+    font-size: 12px;
+    padding: 9px 60px 10px;
+  }
+  &:hover {
+    transform: translate(3px, -3px);
+    box-shadow: -3px 3px 5px rgba(#000, 0.2);
+    filter: brightness(99%);
+  }
+  &:active {
+    transform: none;
+    box-shadow: 0 0 5px rgba(#000, 0.2);
+    filter: brightness(90%);
+  }
+}

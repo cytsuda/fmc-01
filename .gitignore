@@ -31,7 +31,7 @@ yarn-error.log*
 .env.production.local
 
 #scss
-/pages/style/*.module.css
-/pages/style/*.module.css.map
+.module.css
+.module.css.map
 
 report.**.json
