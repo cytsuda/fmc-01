@@ -1,0 +1,141 @@
+@import "../../../styles/auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap");
+$Violet: hsl(257, 40%, 49%);
+$fontBody: "Open Sans", sans-serif;
+$fontHeading: "Poppins", sans-serif;
+
+.main {
+  background: url("./bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  background-color: $Violet;
+  min-height: 100vh;
+  padding: 65px calc(50vw - 640px) 40px;
+  display: flex;
+  flex-direction: column;
+  @include responsive(laptop_l) {
+    padding: 65px 80px 40px;
+  }
+  @include responsive(mobile_l) {
+    padding: 45px 40px 40px;
+    background: url("./bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-color: $Violet;
+  }
+}
+
+.logo {
+  margin-bottom: 105px;
+  width: 200px;
+
+  @include responsive(tablet) {
+    width: 40%;
+  }
+  @include responsive(mobile_l) {
+    width: 120px;
+    margin-bottom: 65px;
+  }
+  &Img {
+    width: 100%;
+  }
+}
+.center {
+  display: flex;
+  grid-gap: 60px;
+  @include responsive(tablet) {
+    flex-direction: column;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  @include responsive(mobile_l) {
+    margin-bottom: 65px;
+    grid-gap: 0;
+  }
+  &First {
+    min-width: 695px;
+    @include responsive(laptop) {
+      min-width: 44vw;
+    }
+    @include responsive(mobile_l) {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    &Img {
+      width: 100%;
+    }
+  }
+  &Second {
+    color: #fff;
+    &Titulo {
+      font-size: 40px;
+      font-family: $fontHeading;
+      margin-bottom: 25px;
+      margin-top: 36px;
+      font-weight: 700;
+      @include responsive(laptop) {
+        font-size: 30px;
+        margin-top: 20px;
+      }
+      @include responsive(mobile_l) {
+        font-size: 24px;
+        margin-bottom: 14px;
+      }
+    }
+    &Text {
+      font-size: 18px;
+      line-height: 150%;
+      margin-bottom: 20px;
+      font-family: $fontBody;
+      @include responsive(laptop) {
+        font-size: 16px;
+      }
+      @include responsive(mobile_l) {
+        margin-bottom: 25px;
+      }
+    }
+    &Button {
+      font-family: $fontHeading;
+      font-weight: 400;
+      color: $Violet;
+      padding: 15px 65px 14px;
+      border-radius: 50px;
+      box-shadow: 0 0 5px rgba(#000,.3);
+      transition: all .2s ease-in-out;
+
+      &:hover{
+        transform: translate(3px, -3px);
+        box-shadow: -3px 3px 5px rgba(#000,.3);
+        background-color: darken(#fff, 10%);
+      }
+      &:active{
+        transform: none;
+        box-shadow: 0 0 5px rgba(#000,.3);
+        background-color: darken(#fff, 30%);
+      }
+    }
+  }
+}
+.social {
+  display: flex;
+  grid-gap: 16px;
+  margin-top: auto;
+  margin-left: auto;
+
+  @include responsive(tablet) {
+    margin: auto auto 0;
+  }
+  &Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+  }
+}

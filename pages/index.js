@@ -12,7 +12,8 @@ const idLink = [
   "intro-component-with-sign-up-form",
   "single-price-grid-component",
   "ping-coming-soon-page",
-  "huddle-landing-page-with-alternating-feature-blocks"
+  "huddle-landing-page-with-alternating-feature-blocks",
+  "huddle-landing-page-with-single-introductory-section"
 ];
 export default function Home() {
   return (

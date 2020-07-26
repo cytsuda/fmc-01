@@ -1,6 +1,5 @@
 .enterActive {
   opacity: 0;
-  transform: translate(-50%, -70%);
 }
 
 .enterDone {
@@ -14,6 +13,5 @@
 
 .exitActive {
   opacity: 0;
-  transform: translate(-50%, -70%);
   transition: all 200ms ease-in-out;
 }
