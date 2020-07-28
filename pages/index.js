@@ -13,7 +13,8 @@ const idLink = [
   "single-price-grid-component",
   "ping-coming-soon-page",
   "huddle-landing-page-with-alternating-feature-blocks",
-  "huddle-landing-page-with-single-introductory-section"
+  "huddle-landing-page-with-single-introductory-section",
+  "fylo-landing-page-with-two-column-layout",
 ];
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
             {idLink.map((item, index) => (
               <Link key={index} href={"/fmc/" + item} as={"/fmc/" + item}>
                 <a style={{ textTransform: "capitalize" }}>
-                  {index+1}. {item.replace(/-/g, " ")}
+                  {index + 1}. {item.replace(/-/g, " ")}
                 </a>
               </Link>
             ))}

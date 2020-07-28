@@ -1,0 +1,614 @@
+@import "../../../styles/auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+$VeryDarkBlue: hsl(243, 87%, 12%);
+$DesaturatedBlue: hsl(238, 22%, 44%);
+$BrightBlue: hsl(224, 93%, 58%);
+$ModerateCyan: hsl(170, 45%, 43%);
+$LightGrayishBlue: hsl(240, 75%, 98%);
+$LightGray: hsl(0, 0%, 75%);
+
+$fontBody: "Open Sans", sans-serif;
+$fontHeading: "Raleway", sans-serif;
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 65px calc(50vw - 640px) 165px;
+  @include responsive(laptop_l) {
+    padding: 65px 80px 165px;
+  }
+  @include responsive(mobile_l) {
+    padding: 30px 25px 90px;
+  }
+  &Main {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 50px;
+    margin-top: 85px;
+    @include responsive(laptop) {
+      margin-top: 60px;
+    }
+    @include responsive(tablet) {
+      flex-direction: column-reverse;
+    }
+    @include responsive(mobile_l) {
+      margin-top: 105px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &Logo {
+    width: 165px;
+    @include responsive(mobile_l) {
+      width: 80px;
+    }
+  }
+  &Menu {
+    list-style: none;
+    display: flex;
+    grid-gap: 60px;
+    font-family: $fontHeading;
+    color: $VeryDarkBlue;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    @include responsive(mobile_l) {
+      font-size: 14px;
+      grid-gap: 25px;
+    }
+    @include responsive(mobile_s) {
+      grid-gap: 15px;
+    }
+    &Item {
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s ease-in-out;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: lighten($VeryDarkBlue, 10%);
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        transition: all 0.2s ease-in-out;
+        transform: scaleX(0);
+      }
+      &:hover {
+        color: lighten($VeryDarkBlue, 10%);
+        &:after {
+          transform: scaleX(1);
+        }
+      }
+    }
+    &Link {
+    }
+  }
+}
+
+.hFirst {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 25px;
+  flex: 1;
+  @include responsive(laptop) {
+    grid-gap: 16px;
+    margin-top: 40px;
+  }
+  @include responsive(mobile_l) {
+    margin-top: 0;
+  }
+  &Title {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: $fontHeading;
+    color: $VeryDarkBlue;
+    line-height: 1.5;
+    @include responsive(laptop) {
+      font-size: 30px;
+    }
+    @include responsive(tablet) {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    @include responsive(mobile_l) {
+      margin-top: 0;
+      font-size: 24px;
+    }
+  }
+  &Text {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: $fontBody;
+    color: $VeryDarkBlue;
+    line-height: 1.35;
+    @include responsive(tablet) {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    @include responsive(mobile_l) {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  &Form {
+    display: flex;
+    justify-content: flex-start;
+    @include responsive(mobile_l) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.hSecond {
+  flex: 1;
+  &Img {
+    width: 100%;
+  }
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+}
+.tImage {
+}
+.tC {
+  padding: 65px calc(50vw - 640px) 105px;
+  background-color: #f8f8fe;
+  display: flex;
+  justify-content: space-between;
+
+  @include responsive(laptop_l) {
+    padding: 65px 80px 165px;
+  }
+  @include responsive(tablet) {
+    flex-direction: column-reverse;
+  }
+  @include responsive(mobile_l) {
+    padding: 80px 25px;
+  }
+  &Text {
+    color: $VeryDarkBlue;
+
+    @include responsive(laptop) {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    &Title {
+      font-size: 40px;
+      letter-spacing: 0.01em;
+      font-family: $fontHeading;
+      color: $VeryDarkBlue;
+      margin-bottom: 35px;
+      @include responsive(laptop) {
+        flex-direction: 32px;
+      }
+      @include responsive(tablet) {
+        text-align: center;
+      }
+      @include responsive(mobile_l) {
+        font-size: 16px;
+      }
+    }
+    &Phrase {
+      width: 530px;
+      font-family: $fontBody;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      @include responsive(mobile_l) {
+        font-size: 14px;
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+    &Link {
+      font-size: 16px;
+      color: $ModerateCyan;
+      font-family: $fontBody;
+      display: inline-block;
+      padding-bottom: 3px;
+      border-bottom: 1px solid $ModerateCyan;
+      cursor: pointer;
+      margin-bottom: 45px;
+      transition: all 0.2s ease;
+      @include responsive(tablet) {
+        margin: 0 auto 45px;
+      }
+      @include responsive(mobile_l) {
+        margin: 0 auto 40px;
+      }
+      &:hover {
+        border-bottom: 1px solid lighten($ModerateCyan, 20%);
+        color: lighten($ModerateCyan, 20%);
+      }
+      &Control {
+        display: flex;
+        margin-right: auto;
+        align-items: center;
+      }
+    }
+    &Icon {
+      margin-left: 9px;
+    }
+  }
+  &Illustration {
+    flex: 1;
+    & img {
+      width: 100%;
+    }
+    @include responsive(mobile_l) {
+      margin-bottom: 80px;
+    }
+  }
+}
+.card {
+  padding: 25px 35px 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 360px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(#000, 0.2);
+  @include responsive(tablet) {
+    margin: 0 auto;
+    text-align: left;
+  }
+  @include responsive(mobile_l) {
+    width: 100%;
+  }
+  &Icon {
+    width: 14px;
+    margin-bottom: 12px;
+    @include responsive(mobile_l) {
+      height: 11px;
+      width: auto;
+      margin-bottom: 5px;
+    }
+  }
+  &Text {
+    font-size: 13px;
+    letter-spacing: 0.035em;
+    line-height: 1.75;
+    font-family: $fontBody;
+    margin-bottom: 20px;
+    @include responsive(mobile_l) {
+      font-size: 11px;
+    }
+  }
+  &Avatar {
+    display: flex;
+    align-items: center;
+    &Img {
+      width: 32px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    &Info {
+      color: $VeryDarkBlue;
+    }
+    &Name {
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      font-family: $fontHeading;
+      font-weight: 700;
+      margin-bottom: 5px;
+      @include responsive(mobile_l) {
+        font-size: 10px;
+      }
+    }
+    &Role {
+      font-family: $fontBody;
+      font-size: 9px;
+      @include responsive(mobile_l) {
+        font-size: 8px;
+      }
+    }
+  }
+}
+
+.actions {
+  background-color: $DesaturatedBlue;
+  padding: 105px calc(50vw - 640px) 85px;
+  display: flex;
+  justify-content: space-between;
+
+  @include responsive(laptop_l) {
+    padding: 65px 80px 165px;
+    grid-gap: 20px;
+  }
+  @include responsive(mobile_l) {
+    flex-direction: column;
+
+    padding: 55px 25px 70px;
+  }
+}
+.aFirst {
+  color: $LightGrayishBlue;
+
+  @include responsive(laptop_l) {
+    flex: 1;
+  }
+  &Titulo {
+    font-family: $fontHeading;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @include responsive(mobile_l) {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  &Text {
+    font-family: $fontBody;
+    font-size: 17px;
+    line-height: 1.4;
+    width: 527px;
+    @include responsive(laptop_l) {
+      width: 100%;
+    }
+    @include responsive(mobile_l) {
+      font-size: 14px;
+      width: auto;
+      text-align: center;
+    }
+  }
+}
+.aSec {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 15px;
+  align-items: flex-start;
+  @include responsive(laptop_l) {
+    flex: 1;
+  }
+  @include responsive(mobile_l) {
+    padding: 0 40px;
+    grid-gap: 10px;
+  }
+  @include responsive(mobile_s) {
+    padding: 0 10px;
+  }
+}
+
+.footer {
+  padding: 105px calc(50vw - 640px) 85px;
+  background-color: $VeryDarkBlue;
+  display: flex;
+  flex-direction: column;
+
+  @include responsive(laptop_l) {
+    padding: 65px 80px 165px;
+  }
+  @include responsive(mobile_l) {
+    padding: 65px 40px 50px;
+  }
+  &Logo {
+    width: 175px;
+    margin-bottom: 25px;
+  }
+  &Wrap {
+    display: grid;
+    color: $LightGrayishBlue;
+    font-family: $fontBody;
+    font-size: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    @include responsive(tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &Info,
+  &Menu,
+  &Social {
+    list-style: none;
+  }
+  &Menu,
+  &Social {
+    & li {
+      cursor: pointer;
+      &:hover {
+        color: $DesaturatedBlue;
+      }
+    }
+  }
+  &Info {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 18px;
+    @include responsive(tablet) {
+      grid-gap: 18px;
+      margin-bottom: 55px;
+    }
+    &Link {
+      display: flex;
+      align-items: center;
+      grid-gap: 18px;
+    }
+  }
+  &Menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    @include responsive(tablet) {
+      grid-gap: 50px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+    &Sep {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 16px;
+    }
+  }
+  &Social {
+    display: flex;
+    grid-gap: 15px;
+    @include responsive(tablet) {
+      align-self: center;
+    }
+    &Item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border: 1px solid $LightGrayishBlue;
+      border-radius: 50%;
+      &:hover {
+        border: 1px solid $DesaturatedBlue;
+      }
+    }
+  }
+}
+
+.input {
+  padding: 14px 21px 12px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  width: 320px;
+  margin-right: 16px;
+  font-family: $fontBody;
+  border: 1px solid $VeryDarkBlue;
+  @include responsive(mobile_l) {
+    margin-bottom: 16px;
+    margin-right: 0;
+    width: unset;
+  }
+  &.nborder {
+    border: none;
+    height: 50px;
+    width: 480px;
+    margin-right: 10px;
+    @include responsive(laptop_l) {
+      width: 100%;
+    }
+    @include responsive(mobile_l) {
+      margin: 0;
+      width: 100%;
+    }
+  }
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.35;
+    color: $LightGray;
+    font-family: $fontBody;
+    letter-spacing: 0.03em;
+  }
+}
+.button {
+  padding: 0 60px;
+  background-color: $BrightBlue;
+  color: #fff;
+  font-family: $fontHeading;
+  font-weight: 700;
+  border-radius: 3px;
+  box-shadow: 2px 2px 8px rgba(#000, 0.25);
+  transition: all 0.2s ease-in-out;
+
+  @include responsive(mobile_l) {
+    height: 50px;
+  }
+  &.actions {
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include responsive(mobile_l) {
+      width: 100%;
+    }
+  }
+  &:hover {
+    transform: translate(2px, -2px);
+    -webkit-transform: translate(2px, -2px);
+    box-shadow: 0 4px 8px rgba(#000, 0.25);
+  }
+  &:active {
+    transform: none;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: none;
+    background-color: darken($BrightBlue, 10%);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: $LightGrayishBlue;
+  min-width: 300px;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(#000, 0.2);
+  &Top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 15px;
+    font-size: 24px;
+    color: $VeryDarkBlue;
+    font-family: $fontHeading;
+    background-color: $LightGrayishBlue;
+    @include responsive(tablet) {
+      font-size: 20px;
+      padding: 20px 15px 10px;
+    }
+  }
+  &Icon {
+    font-size: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #f7b643;
+    @include responsive(tablet) {
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &Text {
+    &Span {
+      text-transform: capitalize;
+    }
+  }
+  &Button {
+    padding: 15px 0;
+    color: $LightGrayishBlue;
+    font-family: $fontHeading;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: $BrightBlue;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      filter: grayscale(10%);
+    }
+  }
+}
