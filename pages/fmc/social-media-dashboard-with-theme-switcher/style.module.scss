@@ -87,7 +87,7 @@ $theme-map: null;
   @include themify($themes) {
     background-color: themed("backgroundColor");
   }
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     padding: 35px 80px 75px;
   }
   @include responsive(mobile_l) {
@@ -120,7 +120,7 @@ $theme-map: null;
       @include themify($themes) {
         color: themed("contrastText");
       }
-      @include responsive(laptop) {
+      @include responsive(laptop_s) {
         font-size: 24px;
       }
     }
@@ -204,7 +204,7 @@ $theme-map: null;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   grid-gap: 30px;
   margin-bottom: 45px;
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     grid-gap: 25px;
   }
 }
@@ -317,7 +317,7 @@ $theme-map: null;
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 25px;
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     grid-column-gap: 25px;
     grid-row-gap: 20px;
   }

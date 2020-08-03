@@ -27,7 +27,7 @@ $LinearGradientPink: linear-gradient(
   width: 100vw;
   background-color: hsl(0, 80%, 86%);
   font-family: "Josefin Sans", sans-serif;
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     height: auto;
   }
 }
@@ -48,7 +48,7 @@ $LinearGradientPink: linear-gradient(
     height: auto;
     padding-left: 11.6vw;
   }
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     padding: 0;
   }
   @include responsive(mobile_l) {
@@ -58,7 +58,7 @@ $LinearGradientPink: linear-gradient(
 
 .logo {
   margin-bottom: 135px;
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     padding: 32px;
     margin-bottom: 0;
   }
@@ -67,7 +67,7 @@ $LinearGradientPink: linear-gradient(
 .text {
   max-width: 430px;
   color: $DarkGrayishRed;
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     margin-left: 50vw;
     margin-top: 10vh;
     max-width: 45vw;
@@ -121,7 +121,7 @@ $LinearGradientPink: linear-gradient(
   width: 450px;
   position: relative;
 
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     margin-left: 50vw;
     max-width: 45vw;
   }
@@ -241,7 +241,7 @@ $LinearGradientPink: linear-gradient(
     height: 100vh;
     background-size: cover;
   }
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     top: 104px;
     left: 0;
     width: 45vw;

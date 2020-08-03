@@ -1,6 +1,7 @@
 $breakpoints: (
   laptop_l: 1440px,
-  laptop: 1024px,
+  laptop_m: 1280px,
+  laptop_s: 1024px,
   tablet: 768px,
   mobile_l: 425px,
   mobile_m: 375px,
@@ -16,7 +17,13 @@ $breakpoints: (
   }
   
   // laptop    : 1024px
-  @if $breakpoint == laptop {
+  @if $breakpoint == laptop_m {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+  // laptop    : 1024px
+  @if $breakpoint == laptop_s {
     @media only screen and (max-width: 1024px) {
       @content;
     }

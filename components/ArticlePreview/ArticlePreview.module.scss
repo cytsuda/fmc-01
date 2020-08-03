@@ -179,7 +179,7 @@ $LightGrayishBlue: hsl(210, 46%, 95%);
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     visibility: hidden;
-    @include responsive(laptop) {
+    @include responsive(laptop_s) {
       border-bottom-right-radius: 0;
       right: 16px;
     }
@@ -206,7 +206,7 @@ $LightGrayishBlue: hsl(210, 46%, 95%);
       height: 0;
       margin-left: -20px;
       margin-bottom: -20px;
-      @include responsive(laptop) {
+      @include responsive(laptop_s) {
         left: unset;
         right: 0;
         border-top-color: $VeryDarkGrayishBlue;

@@ -10,4 +10,7 @@
   backdrop-filter: blur(3px);
   z-index: 99;
   transform: translate(-50%,-50%);
+  & body{
+    overflow: hidden;
+  }
 }

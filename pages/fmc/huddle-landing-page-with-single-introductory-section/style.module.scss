@@ -56,7 +56,7 @@ $fontHeading: "Poppins", sans-serif;
   }
   &First {
     min-width: 695px;
-    @include responsive(laptop) {
+    @include responsive(laptop_s) {
       min-width: 44vw;
     }
     @include responsive(mobile_l) {
@@ -75,7 +75,7 @@ $fontHeading: "Poppins", sans-serif;
       margin-bottom: 25px;
       margin-top: 36px;
       font-weight: 700;
-      @include responsive(laptop) {
+      @include responsive(laptop_s) {
         font-size: 30px;
         margin-top: 20px;
       }
@@ -89,7 +89,7 @@ $fontHeading: "Poppins", sans-serif;
       line-height: 150%;
       margin-bottom: 20px;
       font-family: $fontBody;
-      @include responsive(laptop) {
+      @include responsive(laptop_s) {
         font-size: 16px;
       }
       @include responsive(mobile_l) {

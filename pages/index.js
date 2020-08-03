@@ -15,8 +15,10 @@ const idLink = [
   "huddle-landing-page-with-alternating-feature-blocks",
   "huddle-landing-page-with-single-introductory-section",
   "fylo-landing-page-with-two-column-layout",
-  "social-media-dashboard-with-theme-switcher"
+  "social-media-dashboard-with-theme-switcher",
+  "insure-landing-page"
 ];
+
 export default function Home() {
   return (
     <div className="container">

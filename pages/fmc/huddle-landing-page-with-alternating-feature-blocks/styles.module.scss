@@ -26,7 +26,7 @@ font-family: 'Poppins', sans-serif;
     background: url("./bg-hero-mobile.svg");
     background-color: $VeryPaleCyan;
   }
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -71,7 +71,7 @@ font-family: 'Poppins', sans-serif;
         font-size: 40px;
         color: $VeryDarkCyan;
         margin-bottom: 30px;
-        @include responsive(laptop) {
+        @include responsive(laptop_s) {
           font-size: 32px;
         }
         @include responsive(tablet) {
@@ -92,7 +92,7 @@ font-family: 'Poppins', sans-serif;
         color: $VeryDarkCyan;
         width: 520px;
         margin-bottom: 32px;
-        @include responsive(laptop) {
+        @include responsive(laptop_s) {
           width: 40vw;
         }
         @include responsive(tablet) {
@@ -144,7 +144,7 @@ font-family: 'Poppins', sans-serif;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 10px rgba($GrayishBlue, 0.3);
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     padding-left: 60px;
   }
   @include responsive(mobile_l) {

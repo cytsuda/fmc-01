@@ -33,7 +33,7 @@ $VeryLightGray: hsl(0, 0%, 98%);
     width: 100%;
     padding: 75px 5vw 80px;
   }
-  @include responsive(laptop){
+  @include responsive(laptop_s){
     padding: 50px 20px 50px;
   }
 }

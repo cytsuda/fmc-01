@@ -103,7 +103,7 @@ $GrayishBlue: hsl(240, 18%, 77%);
   display: flex;
   font-size: 20px;
   letter-spacing: 0.01em;
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     font-size: 16px;
   }
   @include responsive(tablet) {

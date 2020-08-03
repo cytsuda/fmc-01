@@ -34,7 +34,7 @@ $GrayishBlue: hsl(246, 25%, 77%);
     height: 100vh;
     padding: 0 11.45vw;
   }
-  @include responsive(laptop){
+  @include responsive(laptop_s){
     padding: 0 80px;
   }
   @include responsive(tablet){

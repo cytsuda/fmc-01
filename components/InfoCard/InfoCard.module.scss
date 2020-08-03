@@ -41,7 +41,7 @@
   &Icon{
     margin-left: auto;
     margin-top: auto;
-    @include responsive(laptop){
+    @include responsive(laptop_s){
       width: 57px;
       height: 57px;
     }

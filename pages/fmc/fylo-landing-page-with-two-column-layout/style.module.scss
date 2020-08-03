@@ -31,7 +31,7 @@ $fontHeading: "Raleway", sans-serif;
     justify-content: space-between;
     grid-gap: 50px;
     margin-top: 85px;
-    @include responsive(laptop) {
+    @include responsive(laptop_s) {
       margin-top: 60px;
     }
     @include responsive(tablet) {
@@ -102,7 +102,7 @@ $fontHeading: "Raleway", sans-serif;
   flex-direction: column;
   grid-gap: 25px;
   flex: 1;
-  @include responsive(laptop) {
+  @include responsive(laptop_s) {
     grid-gap: 16px;
     margin-top: 40px;
   }
@@ -115,7 +115,7 @@ $fontHeading: "Raleway", sans-serif;
     font-family: $fontHeading;
     color: $VeryDarkBlue;
     line-height: 1.5;
-    @include responsive(laptop) {
+    @include responsive(laptop_s) {
       font-size: 30px;
     }
     @include responsive(tablet) {
@@ -183,18 +183,13 @@ $fontHeading: "Raleway", sans-serif;
   &Text {
     color: $VeryDarkBlue;
 
-    @include responsive(laptop) {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
     &Title {
       font-size: 40px;
       letter-spacing: 0.01em;
       font-family: $fontHeading;
       color: $VeryDarkBlue;
       margin-bottom: 35px;
-      @include responsive(laptop) {
+      @include responsive(laptop_s) {
         flex-direction: 32px;
       }
       @include responsive(tablet) {
