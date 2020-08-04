@@ -16,7 +16,7 @@ const idLink = [
   "huddle-landing-page-with-single-introductory-section",
   "fylo-landing-page-with-two-column-layout",
   "social-media-dashboard-with-theme-switcher",
-  "insure-landing-page"
+  "insure-landing-page",
 ];
 
 export default function Home() {
@@ -38,6 +38,8 @@ export default function Home() {
                 </a>
               </Link>
             ))}
+            <a href="https://cytsuda.github.io/pricing-component-with-toggle/">Pricing Component with Toggle</a>
+  
           </div>
         </div>
       </main>

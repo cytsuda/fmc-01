@@ -32,16 +32,20 @@ Organização dos arquivos:
 
 10/07/2020 - Frontend Mentor 04 - Four card feature section
 
-Inicio: 11:15
-
-Fim: 14:46
-
 11/07/2020 - Frontend Mentor 05 - Base Apparel Coming Soon Page
 
-Inicio: 16:06
-
-Inicio da pausa: 18:11
-
 18/07/2020 - Frontend Mentor 06 - Intro component with sign-up form
+
 20/07/2020 - Frontend Mentor 07 - Single price grid component
-single-price-grid-component
+
+21/07/2020 - Frontend Mentor 08 - Ping Coming Soon
+
+24/07/2020 - Frontend Mentor 09 - Huddle landing Page
+
+26/07/2020 - Frontend Mentor 10 - Huddle Landing Page with single intro
+
+28/07/2020 - Frontend Mentor 11 - Fylo Landing Page With Two Column
+
+31/07/2020 - Frontend Mentor 12 - Social media dashboard w/ Theme
+
+03/08/2020 - Frontend Mentor 13 - Insure Landing Page
