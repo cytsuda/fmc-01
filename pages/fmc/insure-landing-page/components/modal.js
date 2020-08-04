@@ -1,15 +1,14 @@
 import React from "react";
 import { CSSTransition } from "react-transition-group";
 
+
 import styles from "./Modal.module.scss";
-import animation from "../../../api/animation.module.scss";
 
 const Modal = (props) => {
   return (
     <CSSTransition
       in={props.open}
       timeout={200}
-      classNames={animation}
       unmountOnExit
     >
       <div className={styles.modal}>
