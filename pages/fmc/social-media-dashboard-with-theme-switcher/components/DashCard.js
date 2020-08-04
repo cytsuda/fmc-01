@@ -20,15 +20,15 @@ const Card = (props) => {
       <p
         className={clsx(
           styles.dashBal,
-          props.balance.signal ? styles.green : styles.red
+          props.balanceSignal ? styles.green : styles.red
         )}
       >
-        {props.balance.signal ? (
+        {props.balanceSignal ? (
           <img src={srcLocal + `icon-up.svg`} />
         ) : (
           <img src={srcLocal + `icon-down.svg`} />
         )}
-        {props.balance.value}
+        {props.balanceValue}
       </p>
     </div>
   );

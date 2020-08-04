@@ -14,7 +14,7 @@ const InfoCard = (props) => {
       />
       <p className={styles.viewValue}>{props.value}</p>
       <div className={styles.viewBalance}>
-        {props.balance.signal ? (
+        {props.balanceSignal ? (
           <img src={srcLocal + `icon-up.svg`} />
         ) : (
           <img src={srcLocal + `icon-down.svg`} />
@@ -22,10 +22,10 @@ const InfoCard = (props) => {
         <span
           className={clsx(
             styles.viewBalanceValue,
-            props.balance.signal ? styles.green : styles.red
+            props.balanceSignal ? styles.green : styles.red
           )}
         >
-          {props.balance.value}
+          {props.balanceValue}
         </span>
       </div>
     </div>

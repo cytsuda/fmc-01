@@ -4,40 +4,32 @@
       "user": "@nathanf",
       "value": "1987",
       "text": "Followers",
-      "balance": {
-        "signal": true,
-        "value": "12 Today"
-      },
+      "balanceSignal": true,
+      "balanceValue": "12 Today",
       "type": "facebook"
     },
     {
       "user": "@nathanf",
       "value": "1044",
       "text": "Followers",
-      "balance": {
-        "signal": true,
-        "value": "99 Today"
-      },
+      "balanceSignal": true,
+      "balanceValue": "99 Today",
       "type": "twitter"
     },
     {
       "user": "@realnathanf",
       "value": "11k",
       "text": "Followers",
-      "balance": {
-        "signal": true,
-        "value": "1099 Today"
-      },
+      "balanceSignal": true,
+      "balanceValue": "1099 Today",
       "type": "instagram"
     },
     {
       "user": "Nathan F.",
       "value": "8239",
       "text": "Subscribers",
-      "balance": {
-        "signal": false,
-        "value": "144 Today"
-      },
+      "balanceSignal": false,
+      "balanceValue": "144 Today",
       "type": "youtube"
     }
   ],
@@ -46,73 +38,57 @@
       "titulo": "Page Views",
       "value": "87",
       "type": "facebook",
-        "balance": {
-        "signal": true,
-        "value": "3%"
-      }
+      "balanceSignal": true,
+      "balanceValue": "3%"
     },
     {
       "titulo": "Likes",
       "value": "52",
       "type": "facebook",
-      "balance": {
-        "signal": false,
-        "value": "2%"
-      }
+      "balanceSignal": false,
+      "balanceValue": "2%"
     },
     {
       "titulo": "Likes",
       "value": "5462",
       "type": "instagram",
-      "balance": {
-        "signal": true,
-        "value": "2257%"
-      }
+      "balanceSignal": true,
+      "balanceValue": "2257%"
     },
     {
       "titulo": "Profile Views",
       "value": "52k",
       "type": "instagram",
-      "balance": {
-        "signal": true,
-        "value": "1375%"
-      }
+      "balanceSignal": true,
+      "balanceValue": "1375%"
     },
     {
       "titulo": "Retweets",
       "value": "117",
       "type": "twitter",
-      "balance": {
-        "signal": true,
-        "value": "303%"
-      }
+      "balanceSignal": true,
+      "balanceValue": "303%"
     },
     {
       "titulo": "Likes",
       "value": "507",
       "type": "twitter",
-      "balance": {
-        "signal": true,
-        "value": "557%"
-      }
+      "balanceSignal": true,
+      "balanceValue": "557%"
     },
     {
       "titulo": "Likes",
       "value": "107",
       "type": "youtube",
-      "balance": {
-        "signal": false,
-        "value": "19%"
-      }
+      "balanceSignal": false,
+      "balanceValue": "19%"
     },
     {
       "titulo": "Total Views",
       "value": "1407",
       "type": "youtube",
-      "balance": {
-        "signal": true,
-        "value": "12%"
-      }
+      "balanceSignal": true,
+      "balanceValue": "12%"
     }
   ]
 }
