@@ -8,6 +8,8 @@ import Hero from "./components/hero";
 import Feat from "./components/feat";
 import Cta from "./components/cta";
 import Footer from "./components/footer";
+import Modal from "./components/modal";
+import Backdrop from "../../../components/Backdrop/Backdrop";
 
 const Main = (props) => {
   const [modal, setModal] = useState(false);
@@ -30,7 +32,8 @@ const Main = (props) => {
         <title>Insure landing page</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      
+      <Backdrop show={modal}>
+        <Modal open={modal} close={handleModalClose}/>
         <main className={clsx(styles.main, menu && styles.menu)}>
           <div className={styles.wrapper}>
             <Nav menu={menu} toggleMenu={handleToggleMenu} openModal={handleModalOpen}/>
@@ -39,8 +42,8 @@ const Main = (props) => {
           <Feat />
           <Cta openModal={handleModalOpen}/>
           <Footer openModal={handleModalOpen}/>
-      </main>
-      
+        </main>
+      </Backdrop>
     </React.Fragment>
   );
 };
