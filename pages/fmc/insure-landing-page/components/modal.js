@@ -3,7 +3,7 @@ import { CSSTransition } from "react-transition-group";
 
 import { GiVineFlower } from "react-icons/gi";
 
-import styles from "./modal.module.scss";
+import styles from "./Modal.module.scss";
 import animation from "../../../api/animation.module.scss";
 
 const Modal = (props) => {
