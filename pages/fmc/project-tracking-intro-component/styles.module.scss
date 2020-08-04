@@ -1,0 +1,219 @@
+@import "../../../styles/auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+
+$Red: hsl(0, 100%, 68%);
+$VeryDarkGray: hsl(230, 29%, 20%);
+$DarkGray: hsl(230, 11%, 40%);
+$Gray: hsl(231, 7%, 65%);
+$LightGray: hsl(207, 33%, 95%);
+$fontBody: "Barlow", sans-serif;
+$fontTitle: "Barlow Condensed", sans-serif;
+
+.main {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  padding: 65px calc(50vw - 555px);
+  z-index: 0;
+  overflow: hidden;
+  @include responsive(laptop_m) {
+    padding: 65px 80px;
+  }
+
+  @include responsive(tablet) {
+    padding: 40px 32px 88px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 187px;
+    width: calc(50vw - 15px);
+    height: 425px;
+    background-color: $LightGray;
+    border-bottom-left-radius: 60px;
+    z-index: -1;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 140px;
+  @include responsive(tablet) {
+    margin-bottom: 64px;
+  }
+  &Logo {
+  }
+  &Menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    @include responsive(mobile_l) {
+      display: flex;
+    }
+    &Icon {
+      color: $DarkGray;
+      font-size: 24px;
+    }
+  }
+  &List {
+    display: flex;
+    list-style: none;
+    font-family: $fontTitle;
+    text-transform: uppercase;
+    font-weight: 700;
+    grid-gap: 42px;
+    color: $VeryDarkGray;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    @include responsive(mobile_l) {
+      top: 100px;
+      left: 50%;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background-color: #fff;
+      z-index: 999;
+      padding: 24px;
+      grid-gap: 24px;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba($VeryDarkGray, .5);
+      transform: translate(-50%);
+      &.open{
+        display:flex;
+      }
+    }
+  }
+  &Circle {
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: darken($LightGray, 10%);
+    @include responsive(mobile_l) {
+      width: 279px;
+      height: 1px;
+    }
+  }
+  &Item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:last-of-type {
+      color: $Gray;
+    }
+  }
+  &Link {
+    cursor: pointer;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include responsive(tablet) {
+    flex-direction: column-reverse;
+  }
+  &First {
+    @include responsive(tablet) {
+      align-self: flex-start;
+    }
+  }
+  &Second {
+    margin-left: 110px;
+
+    @include responsive(laptop_s) {
+      margin-left: 0;
+    }
+    @include responsive(tablet) {
+      align-self: flex-start;
+      margin-left: -44px;
+      margin-bottom: 88px;
+    }
+    @include responsive(mobile_l){
+      height: 240px;
+      margin-left: -20px;
+      & img{
+        height:100%;
+        width: auto;
+      }
+    }
+  }
+  &Top {
+    margin-bottom: 15px;
+    &Tag {
+      color: $LightGray;
+      background-color: $VeryDarkGray;
+      padding: 2px 12px 4px;
+      border-radius: 30px;
+      font-family: $fontTitle;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-right: 16px;
+    }
+  }
+  &Title {
+    font-family: $fontTitle;
+    font-size: 64px;
+    line-height: 1;
+    color: $VeryDarkGray;
+    width: 475px;
+    margin-bottom: 32px;
+    @include responsive(laptop_s) {
+      font-size: 56px;
+    }
+    @include responsive(mobile_l) {
+      font-size: 40px;
+      width: 100%;
+    }
+  }
+  &Text {
+    font-size: 18px;
+    line-height: 1.45;
+    color: $Gray;
+    font-family: $fontBody;
+    width: 270px;
+    margin-bottom: 64px;
+  }
+  &Cta {
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    @include responsive(mobile_m){
+      flex-direction: column;
+    }
+    &Button {
+      background-color: $Red;
+      color: $LightGray;
+      font-size: 17px;
+      font-family: $fontTitle;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 12px 32px 14px;
+      border-radius: 30px;
+    }
+  }
+}
+
+.longText {
+  font-family: $fontTitle;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  color: $Gray;
+  text-transform: uppercase;
+  &.heroCtaText {
+    @include responsive(mobile_l) {
+      font-size: 14px;
+    }
+  }
+}

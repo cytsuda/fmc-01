@@ -17,9 +17,32 @@ const idLink = [
   "fylo-landing-page-with-two-column-layout",
   "social-media-dashboard-with-theme-switcher",
   "insure-landing-page",
+  "pricing-component-with-toggle",
+  "project-tracking-intro-component",
 ];
 
 export default function Home() {
+  const handleSpecialLink = (item, index) => {
+    if (item === "pricing-component-with-toggle") {
+      return (
+        <a
+          key={index}
+          href={`https://cytsuda.github.io/${item}`}
+          style={{ textTransform: "capitalize" }}
+        >
+          {index + 1}. {item.replace(/-/g, " ")}
+        </a>
+      );
+    } else {
+      return (
+        <Link key={index} href={"/fmc/" + item} as={"/fmc/" + item}>
+          <a style={{ textTransform: "capitalize" }}>
+            {index + 1}. {item.replace(/-/g, " ")}
+          </a>
+        </Link>
+      );
+    }
+  };
   return (
     <div className="container">
       <Head>
@@ -31,15 +54,7 @@ export default function Home() {
         <div className={styles.container}>
           <h3 className={styles.titulo}>FrontEnd mentor lista de desafios</h3>
           <div className={styles.list}>
-            {idLink.map((item, index) => (
-              <Link key={index} href={"/fmc/" + item} as={"/fmc/" + item}>
-                <a style={{ textTransform: "capitalize" }}>
-                  {index + 1}. {item.replace(/-/g, " ")}
-                </a>
-              </Link>
-            ))}
-            <a href="https://cytsuda.github.io/pricing-component-with-toggle/">Pricing Component with Toggle</a>
-  
+            {idLink.map((item, index) => handleSpecialLink(item, index))}
           </div>
         </div>
       </main>

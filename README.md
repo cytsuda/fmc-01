@@ -7,6 +7,7 @@ Configurações da rotas:
 _*locahost.com/fmc/nome-completo-do-projeto*_
 
 Organização dos arquivos:
+
 ```
 /root
   - /pages
@@ -23,8 +24,10 @@ Organização dos arquivos:
     - /fmc
       - nome-completo-do-projeto
 ```
---- 
-06/07/2020 - Frontend Mentor 01 - Fylo data storage 
+
+---
+
+06/07/2020 - Frontend Mentor 01 - Fylo data storage
 
 07/07/2020 - Frontend Mentor 02 - Article preview component
 
@@ -49,3 +52,7 @@ Organização dos arquivos:
 31/07/2020 - Frontend Mentor 12 - Social media dashboard w/ Theme
 
 03/08/2020 - Frontend Mentor 13 - Insure Landing Page
+
+03/08/2020 - Frontend Mentor 14 - Pricing Component with Toggle
+
+04/08/2020 - Frontend mentor 15 - Project Tracking Intro Component
