@@ -4,13 +4,13 @@ import { CSSTransition } from "react-transition-group";
 import { GiVineFlower } from "react-icons/gi";
 
 import style from "./styles.module.scss";
-import animation from "../../../api/animation.module.scss";
+import animation from "../../../api/modalAnimation.module.scss";
 
 const Modal = (props) => {
   return (
     <CSSTransition
       in={props.open}
-      timeout={200}
+      timeout={400}
       classNames={animation}
       unmountOnExit
     >

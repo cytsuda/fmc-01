@@ -8,18 +8,17 @@ $Green: hsl(154, 59%, 51%);
 $Blue: hsl(248, 32%, 49%);
 
 .modal {
-  position: fixed;
   height: auto;
   position: fixed;
   top: 50%;
-  right: 50%;
+  left: 50%;
   z-index: 999;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transform: translate(-50%, -50%);
   font-family: "Poppins", sans-serif;
-  transform: translate(50%, -50%);
   &.blue {
     background-color: $Blue;
     box-shadow: 0 0 25px rgba($Blue, .5);
@@ -54,4 +53,5 @@ $Blue: hsl(248, 32%, 49%);
   border:none;
   color: #333;
   outline: none;
+  cursor: pointer;
 }

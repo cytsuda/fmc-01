@@ -30,7 +30,7 @@ export default function Main(props) {
         <title>Article preview component</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <Backdrop show={modal}>
+      <Backdrop show={modal} close={modalCloseHandle}>
         <Modal
           title="Sharing button is disabled"
           open={modal}

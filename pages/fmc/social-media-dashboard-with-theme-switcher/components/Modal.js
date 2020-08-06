@@ -3,13 +3,13 @@ import React from "react";
 import { CSSTransition } from "react-transition-group";
 import { GiCardRandom } from "react-icons/gi";
 import styles from "../style.module.scss";
-import animation from "../../../api/animation.module.scss";
+import animation from "../../../api/modalAnimation.module.scss";
 
 const Modal = (props) => {
   return (
     <CSSTransition
       in={props.open}
-      timeout={200}
+      timeout={400}
       unmountOnExit
       classNames={animation}
     >

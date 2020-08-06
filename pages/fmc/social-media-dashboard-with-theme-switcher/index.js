@@ -30,7 +30,7 @@ const Main = (props) => {
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <main className={darkMode ? styles.dark : styles.light}>
-        <Backdrop show={modal}>
+        <Backdrop show={modal} close={closeModal}>
           <Modal open={modal} closeModal={closeModal} />
           <div className={styles.main}>
             <Top click={handleMode} mode={darkMode} />

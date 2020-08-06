@@ -43,7 +43,7 @@ const Main = (props) => {
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <main className={styles.main}>
-        <Backdrop show={modal.open}>
+        <Backdrop show={modal.open} close={handleCloseModal}>
           <Modal open={modal.open} type={modal.type} close={handleCloseModal} />
           <div className={styles.container}>
             <img

@@ -102,17 +102,17 @@ $fontHeading: "Poppins", sans-serif;
       color: $Violet;
       padding: 15px 65px 14px;
       border-radius: 50px;
-      box-shadow: 0 0 5px rgba(#000,.3);
-      transition: all .2s ease-in-out;
+      box-shadow: 0 0 5px rgba(#000, 0.3);
+      transition: all 0.2s ease-in-out;
 
-      &:hover{
+      &:hover {
         transform: translate(3px, -3px);
-        box-shadow: -3px 3px 5px rgba(#000,.3);
+        box-shadow: -3px 3px 5px rgba(#000, 0.3);
         background-color: darken(#fff, 10%);
       }
-      &:active{
+      &:active {
         transform: none;
-        box-shadow: 0 0 5px rgba(#000,.3);
+        box-shadow: 0 0 5px rgba(#000, 0.3);
         background-color: darken(#fff, 30%);
       }
     }
@@ -137,5 +137,11 @@ $fontHeading: "Poppins", sans-serif;
     border: 1px solid white;
     color: white;
     font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      color: lighten($Violet, 20%);
+      border-color: lighten($Violet, 20%);
+    }
   }
 }

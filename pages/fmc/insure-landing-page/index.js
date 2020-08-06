@@ -32,7 +32,7 @@ const Main = (props) => {
         <title>Insure landing page</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <Backdrop show={modal}>
+      <Backdrop show={modal} close={handleModalClose}>
         <Modal open={modal} close={handleModalClose}/>
         <main className={clsx(styles.main, menu && styles.menu)}>
           <div className={styles.wrapper}>

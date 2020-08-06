@@ -53,7 +53,7 @@ export default function Main(props) {
         <title>Base Apparel Coming Soon Page</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <Backdrop show={modal}>
+      <Backdrop show={modal} close={modalClose}>
         <Modal open={modal} close={modalClose} />
 
         <div className={styles.main}>

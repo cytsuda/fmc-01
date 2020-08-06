@@ -3,8 +3,8 @@ import clsx from "clsx";
 import { GiCakeSlice, GiSummits } from "react-icons/gi";
 import { CSSTransition } from "react-transition-group";
 
-import animation from "../../../api/animation.module.scss";
 import styles from "./Modal.module.scss";
+import animation from "../../../api/modalAnimation.module.scss";
 
 const Modal = (props) => {
   const msg = !props.tipo
@@ -16,7 +16,12 @@ const Modal = (props) => {
     <GiCakeSlice className={styles.icon} />
   );
   return (
-    <CSSTransition in={props.show} timeout={200} classNames={animation} unmountOnExit>
+    <CSSTransition
+      in={props.show}
+      timeout={400}
+      classNames={animation}
+      unmountOnExit
+    >
       <div
         className={clsx(styles.modal, props.tipo ? styles.green : styles.blue)}
       >

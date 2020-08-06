@@ -8,16 +8,18 @@ $LightGray: hsl(204, 43%, 93%);
 $GrayishBlue: hsl(218, 22%, 67%);
 
 .modal {
-  width: 300px;
+  height: auto;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 999;
-  font-family: "Karla", sans-serif;
   border-radius: 5px;
+  width: 300px;
+  display:flex;
+  flex-direction: column;
   overflow: hidden;
   background-color: $LightGray;
+  font-family: "Karla", sans-serif;
   box-shadow: 0 0 20px rgba(#000, 0.4);
 }
 

@@ -4,8 +4,8 @@ import styles from "./Backdrop.module.scss";
 import animation from "../../pages/api/animation.module.scss";
 const Backdrop = (props) => {
   return (
-    <div>
-      <CSSTransition timeout={200} in={props.show} unmountOnExit classNames={animation}>
+    <div >
+      <CSSTransition timeout={400} in={props.show} unmountOnExit classNames={animation} onClick={props.close}>
         <div className={styles.backdrop} />
       </CSSTransition>
       {props.children}

@@ -23,7 +23,7 @@ const Main = (props) => {
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <main>
-        <Backdrop show={modal}>
+        <Backdrop show={modal} close={handleCloseModal}>
           <Modal open={modal} close={handleCloseModal} />
           <Hero onClick={handleOpenModal} />
           <Features />

@@ -1,0 +1,433 @@
+@import "../../../styles/auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+$font: "Bai Jamjuree", sans-serif;
+
+// Primary
+$Cyan: hsl(171, 66%, 44%);
+$CyanHover: #5ecbbb;
+$Blue: hsl(233, 100%, 69%);
+$BlueHover: #8597fe;
+// Neutral
+$GrayDark: hsl(210, 10%, 33%);
+$GrayLight: hsl(201, 11%, 66%);
+$BgFooter: #f5f6f8;
+
+.main {
+  background: url("./assets/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Bai Jamjuree", sans-serif;
+  @include responsive(tablet) {
+    background: url("./assets/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
+}
+
+.logo {
+}
+
+.hero {
+  margin-top: 130px;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include responsive(tablet) {
+    width: 100%;
+    padding: 0 64px;
+    margin-bottom: 164px;
+  }
+  @include responsive(mobile_l) {
+    padding: 0 32px;
+  }
+  &Title {
+    font-size: 46px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+    color: $GrayDark;
+    margin: 24px 0 16px;
+    @include responsive(tablet) {
+      font-size: 40px;
+      margin-top: 64px;
+    }
+    @include responsive(mobile_l) {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+  &Text {
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    width: 700px;
+    color: $GrayLight;
+    text-align: center;
+    margin-bottom: 48px;
+    @include responsive(tablet) {
+      width: 100%;
+    }
+  }
+}
+
+.info {
+  &Container {
+    margin-top: 65px;
+    margin-bottom: 150px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    @include responsive(tablet) {
+      display: flex;
+      flex-direction: column;
+      padding: 0 64px;
+      margin-bottom: 184px;
+    }
+    @include responsive(mobile_l) {
+      padding: 0 32px;
+    }
+  }
+  &Img {
+    @include responsive(laptop_l) {
+      margin-left: -32px;
+    }
+    @include responsive(laptop_s) {
+      height: 450px;
+      margin-left: -125px;
+    }
+    @include responsive(tablet) {
+      margin: auto;
+      width: 100%;
+      height: auto;
+      margin-bottom: 52px;
+    }
+  }
+
+  &List {
+    list-style: none;
+    margin-left: 110px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 64px;
+    @include responsive(tablet) {
+      width: 100%;
+      margin-left: unset;
+    }
+  }
+  &Item {
+    &Title {
+      font-size: 24px;
+      color: $GrayDark;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+    &Text {
+      font-size: 16px;
+      line-height: 1.8;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: $GrayLight;
+    }
+  }
+}
+
+.picture {
+  &Img {
+    margin-top: 98px;
+    @include responsive(tablet) {
+      padding: 0 64px;
+      margin-top: 60px;
+      width: 100%;
+    }
+    @include responsive(mobile_l) {
+      padding: 0 32px;
+    }
+  }
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include responsive(tablet) {
+    margin-top: 96px;
+  }
+  &Info {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 360px));
+    grid-column-gap: 24px;
+    list-style: none;
+    margin-top: 70px;
+    margin-bottom: 158px;
+    @include responsive(tablet) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      grid-gap: 88px;
+      margin-bottom: 132px;
+      padding: 0 64px;
+    }
+    @include responsive(mobile_l) {
+      padding: 0 32px;
+    }
+    &Item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &Img {
+        margin-bottom: 39px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &Title {
+        font-size: 22px;
+        font-weight: 600;
+        color: $GrayDark;
+        letter-spacing: 0.02em;
+        margin-bottom: 12px;
+      }
+      &Text {
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        line-height: 1.85;
+        color: $GrayLight;
+        @include responsive(mobile_l) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  &Imgs {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 169px;
+
+    @include responsive(tablet) {
+      flex-direction: column;
+      grid-gap: 64px;
+      margin-bottom: 172px;
+    }
+  }
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 50px;
+  margin-bottom: 154px;
+
+  & .bts {
+    padding: 0 32px;
+  }
+}
+
+.footer {
+  background-color: $BgFooter;
+  width: 100%;
+  padding: 42px calc(50vw - 555px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include responsive(laptop_m) {
+    padding: 80px;
+  }
+  @include responsive(tablet) {
+    flex-direction: column;
+    grid-gap: 48px;
+  }
+  &Logo {
+    width: 55px;
+  }
+  &Menu {
+    list-style: none;
+    font-family: $font;
+    font-size: 18px;
+    display: grid;
+    width: 664px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 19px;
+    @include responsive(laptop_m) {
+      width: auto;
+    }
+    @include responsive(tablet) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    &Item {
+      cursor: pointer;
+      color: $GrayDark;
+      transition: color 0.2s ease;
+      &:hover {
+        color: $Cyan;
+      }
+    }
+  }
+  &Social {
+    list-style: none;
+    display: flex;
+    grid-gap: 24px;
+    &Item {
+      font-size: 24px;
+      color: $GrayDark;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      &:hover {
+        color: $Cyan;
+      }
+    }
+  }
+}
+.paragraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  grid-gap: 19px;
+  margin: 0 auto;
+  @include responsive(tablet) {
+    padding: 0 64px;
+    width: 100%;
+  }
+  @include responsive(mobile_l) {
+    padding: 0 32px;
+  }
+  &Title {
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    color: $GrayDark;
+    font-weight: 600;
+    @include responsive(mobile_l) {
+      font-size: 28px;
+      letter-spacing: -0.01em;
+      text-align: center;
+    }
+  }
+  &Text {
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    line-height: 1.65;
+    color: $GrayLight;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.bts {
+  display: flex;
+  grid-gap: 16px;
+  @include responsive(mobile_l) {
+    flex-direction: column;
+    grid-gap: 28px;
+    width: 100%;
+  }
+}
+.button {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  border-radius: 50px;
+  padding: 15px 36px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: translate(2px, -2px);
+  }
+  &:active {
+    transform: translate(-2px, 2px);
+  }
+  &.cyan {
+    background-color: $Cyan;
+    box-shadow: 0px 2px 0px #1a9f8a;
+    &:hover {
+      filter: brightness(120%);
+      box-shadow: -2px 4px 0px #1a9f8a;
+    }
+    &:active {
+      filter: brightness(90%);
+      box-shadow: 2px 0px 0px #1a9f8a;
+    }
+  }
+  &.blue {
+    background-color: $Blue;
+    box-shadow: 0px 2px 0px #5063dd;
+    &:hover {
+      filter: brightness(120%);
+      box-shadow: -2px 4px 0px #5063dd;
+    }
+    &:active {
+      filter: brightness(90%);
+      box-shadow: 2px 0px 0px #5063dd;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 320px;
+  z-index: 9999;
+  font-family: $font;
+  padding: 30px 20px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(#333,0.5);
+  &Top {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &Icon {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $Cyan;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      margin-bottom: 25px;
+      & svg{
+        color: #fff;
+        font-size: 50px;
+      }
+    }
+    &Title {
+      font-size: 20px;
+      color: $GrayDark;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    &Text {
+      color: $GrayLight;
+      text-align: center;
+    }
+  }
+  &Button {
+    margin-top: 15px;
+    cursor: pointer;
+  }
+}

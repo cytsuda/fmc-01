@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group";
 import { RiThumbUpLine, RiCodeSSlashLine } from "react-icons/ri";
 
 import styles from "./Modal.module.scss";
-import animation from "../../../api/animation.module.scss";
+import animation from "../../../api/modalAnimation.module.scss";
 
 const Modal = (props) => {
   let icon = <RiCodeSSlashLine />;
@@ -20,7 +20,7 @@ const Modal = (props) => {
   return (
     <CSSTransition
       in={props.open}
-      timeout={200}
+      timeout={400}
       classNames={animation}
       unmountOnExit
     >

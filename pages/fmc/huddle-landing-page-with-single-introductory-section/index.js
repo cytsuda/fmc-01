@@ -22,7 +22,7 @@ const Main = (props) => {
         <title>Huddle landing page with single introductory section</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <Backdrop show={modal}>
+      <Backdrop show={modal} close={handleModalClose}>
         <Modal open={modal} close={handleModalClose}/>
         <main className={styles.main}>
           <div className={styles.logo}>
@@ -56,13 +56,13 @@ const Main = (props) => {
             </div>
           </div>
           <div className={styles.social}>
-            <div className={styles.socialIcon}>
+            <div className={styles.socialIcon} onClick={handleModalOpen}>
               <GrFacebookOption />
             </div>
-            <div className={styles.socialIcon}>
+            <div className={styles.socialIcon} onClick={handleModalOpen}>
               <GrTwitter />
             </div>
-            <div className={styles.socialIcon}>
+            <div className={styles.socialIcon} onClick={handleModalOpen}>
               <GrInstagram />
             </div>
           </div>

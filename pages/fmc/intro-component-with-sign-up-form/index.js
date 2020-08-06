@@ -94,15 +94,20 @@ const Main = (props) => {
     }
   };
   const modalClose = (val) => {
-    setModal({ open: false, type: val });
+    console.log(isNaN(val));
+    if (isNaN(val)) {
+      setModal((prev) => ({ ...prev, open: false }));
+    } else {
+      setModal({ open: false, type: val });
+    }
   };
   return (
     <React.Fragment>
       <Head>
-        <title>Fylo data storage component</title>
+        <title>Intro component with sign up form</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <Backdrop show={modal.open}>
+      <Backdrop show={modal.open} close={modalClose}>
         <Modal show={modal.open} tipo={modal.type} close={modalClose} />
         <div className={styles.main}>
           <div className={styles.container}>
@@ -129,12 +134,16 @@ const Main = (props) => {
                   type="green"
                   onClick={() => handleClick(1)}
                   disabled={submit}
+                  className={styles.button}
                 >
                   CLAIM YOUR FREE TRIAL
                 </Button>
                 <p className={styles.agree}>
                   By clicking the button, you are agreeing to our{" "}
-                  <a className={styles.agreeLink} href="/">
+                  <a
+                    className={styles.agreeLink}
+                    onClick={() => handleClick(0)}
+                  >
                     Terms and Services
                   </a>
                 </p>

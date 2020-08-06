@@ -20,8 +20,8 @@ const Main = (props) => {
         <title>Single price grid component</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <Backdrop show={modal.open}>
-        <Modal open={modal.open} type={modal.type} close={modalCloseHandle} />
+      <Backdrop show={modal.open} close={modalCloseHandle}>
+        <Modal show={modal.open} type={modal.type} close={modalCloseHandle} />
         <main className={styles.main}>
           <PrinceComponents modalOpen={modalOpenHandle} />
         </main>

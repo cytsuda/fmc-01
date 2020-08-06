@@ -111,6 +111,9 @@ $fontTitle: "Barlow Condensed", sans-serif;
   }
   &Link {
     cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }
 
@@ -191,15 +194,40 @@ $fontTitle: "Barlow Condensed", sans-serif;
     @include responsive(mobile_m){
       flex-direction: column;
     }
-    &Button {
-      background-color: $Red;
-      color: $LightGray;
-      font-size: 17px;
-      font-family: $fontTitle;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      padding: 12px 32px 14px;
-      border-radius: 30px;
+
+  }
+}
+
+.button {
+  background-color: $Red;
+  color: $LightGray;
+  font-size: 17px;
+  font-family: $fontTitle;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 12px 32px 14px;
+  border-radius: 30px;
+  transition: all .2s ease;
+  position: relative;
+  &:after{
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    transition: all .2s ease;
+    border-radius: 100px;
+    z-index: -1;
+  }
+  &:hover{
+    filter: brightness(125%);
+    color: $LightGray;
+    &:after{
+      transform: translate(5%, -5%);
+      width: 110%;
+      height: 110%;
     }
   }
 }
@@ -215,5 +243,72 @@ $fontTitle: "Barlow Condensed", sans-serif;
     @include responsive(mobile_l) {
       font-size: 14px;
     }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 320px;
+  z-index: 9999;
+  padding: 30px 20px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px rgba(#333,0.5);
+  &Top {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &Icon {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $Red;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      margin-bottom: 25px;
+      & svg{
+        color: #fff;
+        font-size: 50px;
+      }
+    }
+    &Title {
+      font-size: 20px;
+      color: $VeryDarkGray;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-family: $fontTitle;
+      text-transform: uppercase;
+      letter-spacing: -.02em;
+    }
+    &Text {
+      color: $DarkGray;
+      text-align: center;
+      font-family: $fontBody;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      width: 90%;
+      & a{
+        color: $Red;
+        font-weight: 600;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &Button {
+    margin-top: 15px;
+    width: 85%;
+    cursor: pointer;
   }
 }

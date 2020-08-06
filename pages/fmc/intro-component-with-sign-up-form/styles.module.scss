@@ -73,6 +73,9 @@ $GrayishBlue: hsl(246, 25%, 77%);
 }
 .button {
   margin-bottom: 24px;
+  width: 100%;
+  padding: 17px 0 19px;
+  cursor: pointer;
   @include responsive(tablet){
     padding-right: 75px;
     padding-left: 75px;
@@ -92,5 +95,6 @@ $GrayishBlue: hsl(246, 25%, 77%);
     font-weight: 700;
     color: $Red;
     text-decoration: none;
+    cursor: pointer;
   }
 }

@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import { GiCakeSlice } from "react-icons/gi";
 
 import styles from "./Modal.module.scss";
-import animation from "../../../api/animation.module.scss";
+import animation from "../../../api/modalAnimation.module.scss";
 
 import Button from "../../../../components/Button/Button";
 
@@ -12,7 +12,7 @@ const Modal = (props) => {
   return (
     <CSSTransition
       in={props.open}
-      timeout={200}
+      timeout={400}
       classNames={animation}
       unmountOnExit
     >

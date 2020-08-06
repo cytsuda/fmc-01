@@ -40,7 +40,7 @@ const Main = (props) => {
         <title>Fylo landing page with two column layout</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <Backdrop show={modal}>
+      <Backdrop show={modal} close={handleModalClose}>
         <Modal open={modal} close={handleModalClose} type={modalType} />
         <main className={styles.main}>
           <Hero

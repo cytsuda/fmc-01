@@ -19,6 +19,7 @@ const idLink = [
   "insure-landing-page",
   "pricing-component-with-toggle",
   "project-tracking-intro-component",
+  "clipboard-landing-page"
 ];
 
 export default function Home() {

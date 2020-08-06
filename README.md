@@ -56,3 +56,5 @@ Organização dos arquivos:
 03/08/2020 - Frontend Mentor 14 - Pricing Component with Toggle
 
 04/08/2020 - Frontend mentor 15 - Project Tracking Intro Component
+
+06/08/2020 - Frontend mentor 16 - Clipboard Landing Page

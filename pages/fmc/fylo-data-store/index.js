@@ -38,7 +38,7 @@ const Main = (props) => {
         <title>Fylo data storage component</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <Backdrop show={modalOpen}>
+      <Backdrop show={modalOpen} close={handleModalClose}>
         <Modal open={modalOpen} close={handleModalClose} />
         <main className={styles.main}>
           <div className={styles.container}>
