@@ -1,0 +1,36 @@
+@import "../../styles/auxiliar";
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&family=Raleway:wght@500&display=swap");
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+}
+.titulo {
+  margin-bottom: 15px;
+  font-size: 40px;
+  font-family: "Grenze Gotisch", cursive;
+  color: #34495e;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 700;
+  color: #3498db;
+  font-family: "Raleway", sans-serif;
+
+  & a {
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 10px;
+    &:hover {
+      color: #2980b9;
+    }
+  }
+}

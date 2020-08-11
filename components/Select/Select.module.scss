@@ -1,0 +1,62 @@
+@import "../../styles/auxiliar";
+
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &Label{
+    position: absolute;
+    top: -15px;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: capitalize;
+  }
+  &Input {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all .1s ease;
+    border: 1px solid;
+    &.disabled{
+      cursor: default;
+      background-color: #e0e0e0;
+      color: #999;
+    }
+    &.open{
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &Text, &Icon{
+      @include center;
+    }
+  }
+  &List {
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    left: 0;
+    flex-direction: column;
+    border: 1px solid;
+    border-top: none;
+    box-shadow: 0 2px 2px rgba(#000,.2);
+    z-index: 99;
+  }
+  &Item {
+    padding: 10px 10px 9px;
+    cursor: pointer;
+    transition: all .1s ease;
+    font-size: 14px;
+    &:hover{
+      background-color: #eee;
+    }
+    &:not(:last-of-type) {
+      border-bottom: 1px solid;
+    }
+  }
+}

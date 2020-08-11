@@ -1,9 +1,12 @@
+import React, { useState } from "react";
 import Head from "next/head";
-import Link from "next/link";
 
+import Header from "../components/Main/Header";
+import Footer from "../components/Main/Footer";
+import Portfolio from "../components/Main/Portfolio";
 import styles from "./style.module.scss";
 
-const idLink = [
+const portfolioWork = [
   "fylo-data-store",
   "article-preview",
   "coding-bootcamp-testimonials-slider",
@@ -19,46 +22,40 @@ const idLink = [
   "insure-landing-page",
   "pricing-component-with-toggle",
   "project-tracking-intro-component",
-  "clipboard-landing-page"
+  "clipboard-landing-page",
 ];
 
 export default function Home() {
-  const handleSpecialLink = (item, index) => {
-    if (item === "pricing-component-with-toggle") {
-      return (
-        <a
-          key={index}
-          href={`https://cytsuda.github.io/${item}`}
-          style={{ textTransform: "capitalize" }}
-        >
-          {index + 1}. {item.replace(/-/g, " ")}
-        </a>
-      );
-    } else {
-      return (
-        <Link key={index} href={"/fmc/" + item} as={"/fmc/" + item}>
-          <a style={{ textTransform: "capitalize" }}>
-            {index + 1}. {item.replace(/-/g, " ")}
-          </a>
-        </Link>
-      );
+  const [page, setPage] = useState(1);
+  const [dir, setDir] = useState(1);
+  const maxPage = portfolioWork.length / 8;
+  const handleChangePage = (val) => {
+    if (val && page < maxPage) {
+      setPage(prev => prev + 1);
+      setDir(val);
+    }
+    if (!val && page > 1) {
+      setPage(prev => page - 1);
+      setDir(val);
     }
   };
   return (
-    <div className="container">
+    <React.Fragment>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>This is a nice thing to to</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
-
-      <main className={styles.main}>
-        <div className={styles.container}>
-          <h3 className={styles.titulo}>FrontEnd mentor lista de desafios</h3>
-          <div className={styles.list}>
-            {idLink.map((item, index) => handleSpecialLink(item, index))}
+      <body className={styles.wrapper}>
+        <Header />
+        <div className={styles.center}>
+          <div className={styles.flexLeft}/>
+          <div className={styles.flexCenter}>
+            <Portfolio page={page} data={portfolioWork} dir={dir} />
           </div>
+          <div className={styles.flexRight} />
         </div>
-      </main>
-    </div>
+        <Footer page={page} maxPage={maxPage} changePage={handleChangePage} />
+      </body>
+    </React.Fragment>
   );
 }

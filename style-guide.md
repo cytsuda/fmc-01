@@ -28,5 +28,9 @@ The designs were created to the following widths:
 
 ### Font
 
-- Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+- Font Title
+- Family: [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville)
 - Weights: 400, 700
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat) 
+- Weights: 300, 400, 500, 700
